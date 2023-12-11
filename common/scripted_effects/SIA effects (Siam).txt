@@ -641,14 +641,14 @@ SIA_setup_for_SIACW_government = {
 				SIA_pridi_phanomyong = {
 					set_nationality = PREV.PREV
 					if = {
-						limit = { has_ideology = authoritarian_democrat_subtype }
-						promote_character = yes
+						limit = { has_ideology = radical_socialist_subtype }
+						promote_character = radical_socialist_subtype
 					}
 					else = {
 						add_country_leader_role = {
 							country_leader = {
 								desc = SIA_pridi_phanomyong_leader_desc
-								ideology = authoritarian_democrat_subtype
+								ideology = radical_socialist_subtype
 							}
 							promote_leader = yes
 						}
@@ -692,7 +692,7 @@ SIA_setup_for_SIACW_government = {
 				set_nationality = PREV.PREV
 				if = {
 					limit = { has_ideology = authoritarian_democrat_subtype }
-					promote_character = yes
+					promote_character = authoritarian_democrat_subtype
 				}
 				else = {
 					add_country_leader_role = {
@@ -863,7 +863,7 @@ SIA_setup_for_SIACW_rebel = {
 					set_nationality = PREV.PREV
 					if = {
 						limit = { has_ideology = authoritarian_democrat_subtype }
-						promote_character = yes
+						promote_character = authoritarian_democrat_subtype
 					}
 					else = {
 						add_country_leader_role = {
@@ -2872,22 +2872,36 @@ SIA_peace_treaty_next_event = {
 			if = {
 				limit = {
 					any_enemy_country = {
-						is_subject = no
+						NOT = { has_country_flag = SIA_accepts_peace }
+						NOT = { has_country_flag = SIA_refuses_peace }
+						OR = {
+							is_subject = no
+							overlord = { NOT = { has_war_with = PREV.PREV } }
+						}
 						OR = {
 							is_in_faction = no
 							is_faction_leader = yes
+							faction_leader = { NOT = { has_war_with = PREV.PREV } }
 							faction_leader = { has_country_flag = SIA_accepts_peace }
 							faction_leader = { has_country_flag = SIA_refuses_peace }
 						}
-						NOT = { has_country_flag = SIA_accepts_peace }
-						NOT = { has_country_flag = SIA_refuses_peace }
 					}
 				}
 				random_enemy_country = {
 					limit = {
-						is_subject = no
 						NOT = { has_country_flag = SIA_accepts_peace }
 						NOT = { has_country_flag = SIA_refuses_peace }
+						OR = {
+							is_subject = no
+							overlord = { NOT = { has_war_with = PREV.PREV } }
+						}
+						OR = {
+							is_in_faction = no
+							is_faction_leader = yes
+							faction_leader = { NOT = { has_war_with = PREV.PREV } }
+							faction_leader = { has_country_flag = AUS_accepts_peace }
+							faction_leader = { has_country_flag = AUS_will_continue_war }
+						}
 					}
 					country_event = siam.67
 				}

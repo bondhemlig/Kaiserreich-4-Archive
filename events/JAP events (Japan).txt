@@ -1968,7 +1968,7 @@ country_event = { #dem puppet GetYear general elections
 	is_triggered_only = yes
 
 	trigger = {
-		has_elected_government = yes
+		has_democratic_government = yes
 		is_subject = yes
 	}
 
@@ -2225,7 +2225,7 @@ country_event = { # The Rise of Datsun
 		log = "[GetLogInfo]: event japdom.403 option japdom.403.a"
 		name = japdom.403.a
 		add_equipment_to_stockpile = {
-			type = motorized_equipment
+			type = motorized_equipment_0
 			amount = 1
 		}
 	}
@@ -2640,8 +2640,8 @@ country_event = { #Propose a joint condemnation: denounce imperialism, coloniali
 
 	trigger = {
 		any_country = {
-			is_co_prosperity_candidate = yes
 			has_country_flag = attending_tokyo_conference
+			is_co_prosperity_candidate = yes
 		}
 	}
 
@@ -2774,8 +2774,8 @@ country_event = { #Bring forward a charter on pan-Asian trade
 
 	trigger = {
 		any_country = {
-			is_co_prosperity_candidate = yes
 			has_country_flag = attending_tokyo_conference
+			is_co_prosperity_candidate = yes
 		}
 	}
 
@@ -2786,8 +2786,8 @@ country_event = { #Bring forward a charter on pan-Asian trade
 		custom_effect_tooltip = JAP_80_chance_of_agreeing_tt
 		every_country = {
 			limit = {
-				is_co_prosperity_candidate = yes
 				has_country_flag = attending_tokyo_conference
+				is_co_prosperity_candidate = yes
 			}
 			country_event = japfor.28
 		}
@@ -2804,8 +2804,8 @@ country_event = { #Bring forward a charter on pan-Asian trade
 		custom_effect_tooltip = JAP_100_chance_of_agreeing_tt
 		every_country = {
 			limit = {
-				is_co_prosperity_candidate = yes
 				has_country_flag = attending_tokyo_conference
+				is_co_prosperity_candidate = yes
 			}
 			country_event = japfor.28
 		}
@@ -2900,8 +2900,8 @@ country_event = { #Call for economic integration
 
 	trigger = {
 		any_country = {
-			is_co_prosperity_candidate = yes
 			has_country_flag = attending_tokyo_conference
+			is_co_prosperity_candidate = yes
 		}
 	}
 
@@ -2912,8 +2912,8 @@ country_event = { #Call for economic integration
 		custom_effect_tooltip = JAP_80_chance_of_agreeing_tt
 		every_country = {
 			limit = {
-				is_co_prosperity_candidate = yes
 				has_country_flag = attending_tokyo_conference
+				is_co_prosperity_candidate = yes
 			}
 			country_event = japfor.30
 		}
@@ -2931,8 +2931,8 @@ country_event = { #Call for economic integration
 		custom_effect_tooltip = JAP_100_chance_of_agreeing_tt
 		every_country = {
 			limit = {
-				is_co_prosperity_candidate = yes
 				has_country_flag = attending_tokyo_conference
+				is_co_prosperity_candidate = yes
 			}
 			country_event = japfor.30
 		}
@@ -3219,9 +3219,12 @@ country_event = { #Japan offers membership in sphere / from Tokyo Conference
 					}
 					AND = {
 						tag = INC
-						NOT = {
-							has_game_rule = { rule = INC_forpol option = DEFAULT }
-							has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
+						OR = {
+							has_completed_focus = INC_Commit_to_Chinese_Revolution
+							NOT = {
+								has_game_rule = { rule = INC_forpol option = DEFAULT }
+								has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
+							}
 						}
 					}
 					AND = {
@@ -3278,9 +3281,12 @@ country_event = { #Japan offers membership in sphere / from Tokyo Conference
 					}
 					AND = {
 						tag = INC
-						NOT = {
-							has_game_rule = { rule = INC_forpol option = DEFAULT }
-							has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
+						OR = {
+							has_completed_focus = INC_Commit_to_Chinese_Revolution
+							NOT = {
+								has_game_rule = { rule = INC_forpol option = DEFAULT }
+								has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
+							}
 						}
 					}
 					AND = {
@@ -4745,6 +4751,7 @@ country_event = { #hidden event to fire the peace mission
 			}
 		}
 		OR = {
+			surrender_progress > 0.3
 			AND = {
 				any_enemy_country = {
 					is_chinese_tag = yes
@@ -4783,15 +4790,9 @@ country_event = { #hidden event to fire the peace mission
 				}
 			}
 			AND = {
-				OR = {
-					RUS = {
-						has_war_with = ROOT
-						is_valid_peace_target = yes
-					}
-					SOV = {
-						has_war_with = ROOT
-						is_valid_peace_target = yes
-					}
+				RUS = {
+					has_war_with = ROOT
+					is_valid_peace_target = yes
 				}
 				if = {
 					limit = {
@@ -4802,10 +4803,7 @@ country_event = { #hidden event to fire the peace mission
 				}
 				if = {
 					limit = {
-						OR = {
-							RUS = { has_war_with = FNG }
-							SOV = { has_war_with = FNG }
-						}
+						RUS = { has_war_with = FNG }
 						FNG = { has_capitulated = yes }
 					}
 				}
@@ -5655,7 +5653,7 @@ country_event = { #Russia Accepts Peace
 		name = japfor.239.a
 		clr_global_flag = JAP_will_surrender
 
-		### Hand over Sakhalin, the Kurils and all claims of RUS/SOV and its allies
+		### Hand over Sakhalin, the Kurils and all claims of RUS and its allies
 		every_owned_state = {
 			limit = {
 				set_temp_variable = { current_state = THIS }
@@ -5918,6 +5916,166 @@ country_event = { #anq cuts ties fully itself
 	}
 }
 
+country_event = { #ANQ Forces Secure Hangzhou
+	id = japfor.262
+	title = japfor.262.t
+	desc = japfor.262.d
+	picture = GFX_report_event_ANQ_chen_tiaoyuan
+
+	trigger = {
+		596 = { is_controlled_by = ANQ } #Qiantang
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event japfor.262 option japfor.262.a"
+		name = japfor.262.a
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_equipment = { infantry_equipment < 500 }
+			}
+		}
+		ANQ = { country_event = japfor.263 }
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 500
+				target = ANQ
+				old_prioritised = yes
+			}
+			send_equipment = {
+				equipment = support_equipment
+				amount = 30
+				target = ANQ
+			}
+			send_equipment = {
+				equipment = artillery_equipment
+				amount = 30
+				target = ANQ
+			}
+		}
+		ANQ = {
+			custom_effect_tooltip = anq_increase_jap_1
+			custom_effect_tooltip = anq_increase_fng_1
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event japfor.262 option japfor.262.b"
+		name = japfor.262.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 100
+				has_equipment = { infantry_equipment < 500 }
+			}
+		}
+	}
+}
+
+country_event = { #Japan Offers Equipment
+	id = japfor.263
+	title = japfor.263.t
+	desc = japfor.263.d
+	picture = GFX_report_event_JAP_mutsu
+
+	is_triggered_only = yes
+
+	option = { #We need all the help we can get
+		log = "[GetLogInfo]: event japfor.263 option japfor.263.a"
+		name = japfor.263.a
+		effect_tooltip = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 500
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 30
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 30
+				producer = JAP
+			}
+		}
+		custom_effect_tooltip = anq_increase_jap_1
+		add_to_variable = { ANQ_tokyo_score = 1 }
+		custom_effect_tooltip = anq_increase_fng_1
+		hidden_effect = {
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.01
+			}
+			ANQ_remove_fengtian_spirit = yes
+			ANQ_calculate_fengtian_level = yes
+			ANQ_add_fengtian_spirit = yes
+		}
+		hidden_effect = { JAP = { country_event = japfor.264 } }
+	}
+
+	option = { #Decline, we can do without
+		log = "[GetLogInfo]: event japfor.263 option japfor.263.b"
+		name = japfor.263.b
+		ai_chance = { base = 0 }
+		add_political_power = 15
+		hidden_effect = { JAP = { country_event = japfor.265 } }
+	}
+}
+
+country_event = { #Anqing Accepts Materiel Support
+	id = japfor.264
+	title = japfor.264.t
+	desc = japfor.264.d
+	picture = GFX_report_event_JAP_officer_phone
+
+	is_triggered_only = yes
+
+	option = { #You're welcome
+		log = "[GetLogInfo]: event japfor.264 option japfor.264.a"
+		name = japfor.264.a
+		hidden_effect = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 500
+				target = ANQ
+				old_prioritised = yes
+			}
+			send_equipment = {
+				equipment = support_equipment
+				amount = 30
+				target = ANQ
+			}
+			send_equipment = {
+				equipment = artillery_equipment
+				amount = 30
+				target = ANQ
+			}
+		}
+	}
+}
+
+country_event = { #Anqing Declines Materiel Support
+	id = japfor.265
+	title = japfor.265.t
+	desc = japfor.265.d
+	picture = GFX_report_event_JAP_officer_phone
+
+	is_triggered_only = yes
+
+	option = { #Their loss
+		log = "[GetLogInfo]: event japfor.265 option japfor.265.a"
+		name = japfor.265.a
+	}
+}
+
 ########################
 ###New Foreign Policy###
 ########################
@@ -5992,7 +6150,7 @@ country_event = { #The American islands are ours!
 		FROM = {
 			every_owned_state = {
 				limit = { is_american_pacific_islands = yes }
-				transfer_state_to = FROM
+				transfer_state_to = ROOT
 			}
 		}
 	}
@@ -6181,12 +6339,24 @@ country_event = { #Failed assassination attempt against the Prince
 	option = {
 		log = "[GetLogInfo]: event japfeng.10 option japfeng.10.a"
 		name = japfeng.10.a
+		JAP_kanin_kotohito = {
+			add_timed_unit_leader_trait = {
+				trait = wounded
+				days = 21
+			}
+		}
 		FNG = { country_event = { id = fengtian.22 days = 1 } }
 	}
 	option = {
 		log = "[GetLogInfo]: event japfeng.10 option japfeng.10.b"
 		name = japfeng.10.b
 		add_political_power = -10
+		JAP_kanin_kotohito = {
+			add_timed_unit_leader_trait = {
+				trait = wounded
+				days = 21
+			}
+		}
 	}
 }
 
@@ -6206,7 +6376,6 @@ country_event = { #Setup and monthly checking
 
 	immediate = {
 		JAP_recalculate_economic_integration = yes
-		country_event = { id = japfor.400 days = 30 }
 	}
 }
 
@@ -6275,9 +6444,12 @@ country_event = { #Invited into economic sphere (via decision)
 					}
 					AND = {
 						tag = INC
-						NOT = {
-							has_game_rule = { rule = INC_forpol option = DEFAULT }
-							has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
+						OR = {
+							has_completed_focus = INC_Commit_to_Chinese_Revolution
+							NOT = {
+								has_game_rule = { rule = INC_forpol option = DEFAULT }
+								has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
+							}
 						}
 					}
 					AND = {
@@ -6370,9 +6542,12 @@ country_event = { #Invited into economic sphere (via decision)
 					}
 					AND = {
 						tag = INC
-						NOT = {
-							has_game_rule = { rule = INC_forpol option = DEFAULT }
-							has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
+						OR = {
+							has_completed_focus = INC_Commit_to_Chinese_Revolution
+							NOT = {
+								has_game_rule = { rule = INC_forpol option = DEFAULT }
+								has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
+							}
 						}
 					}
 					AND = {
@@ -6440,9 +6615,12 @@ country_event = { #Invited into economic sphere (via decision)
 					}
 					AND = {
 						tag = INC
-						NOT = {
-							has_game_rule = { rule = INC_forpol option = DEFAULT }
-							has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
+						OR = {
+							has_completed_focus = INC_Commit_to_Chinese_Revolution
+							NOT = {
+								has_game_rule = { rule = INC_forpol option = DEFAULT }
+								has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
+							}
 						}
 					}
 					AND = {
@@ -6633,7 +6811,7 @@ country_event = { #Japanese economic takeover
 		JAP = {
 			set_autonomy = {
 				target = ROOT
-				autonomy_state = kr_special_autonomous_dependency
+				autonomy_state = special_autonomous_dependency
 				end_wars = no
 			}
 		}
@@ -7637,7 +7815,7 @@ news_event = {
 	immediate = { log = "[GetLogInfo]: event japfor.470" }
 	title = japfor.470.t
 	desc = japfor.470.d
-	picture = news_event_NFA_shell_algiers
+	picture = GFX_news_event_JAP_great_pacific_war
 
 	major = yes
 	is_triggered_only = yes

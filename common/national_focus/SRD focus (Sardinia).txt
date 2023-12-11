@@ -1362,7 +1362,6 @@ focus_tree = {
 		y = 1
 
 		available = {
-			is_subject = no
 			owns_state = 158
 			159 = { is_owned_by_ROOT_or_subject = yes }
 			160 = { is_owned_by_ROOT_or_subject = yes }
@@ -1371,9 +1370,15 @@ focus_tree = {
 			2 = { is_owned_by_ROOT_or_subject = yes }
 			117 = { is_owned_by_ROOT_or_subject = yes }
 			controls_all_owned_states = yes
+			OR = {
+			has_completed_focus = SRD_legacy_sassari_brigade
+			has_completed_focus = SRD_the_king_commands
+			has_completed_focus = SRD_maresciallo_a_noi
+			is_subject = yes
+			}
 		}
 		bypass = {
-			has_autonomy_state = kr_federated_state
+			has_autonomy_state = federated_state
 		}
 
 		prerequisite = {
@@ -1422,31 +1427,13 @@ focus_tree = {
 							is_italian_tag = yes
 							is_subject_of = ROOT
 						}
-						is_claimed_by = SRD
 					}
-					hidden_effect = { remove_claim_by = SRD }
+					hidden_effect = { remove_claim_by = ROOT }
+					add_core_of = ROOT
 				}
-				if = {
-					limit = {
-						owner = {
-							is_italian_tag = yes
-							is_subject_of = ROOT
-						}
-						NOT = { is_core_of = SRD }
-					}
-					add_core_of = SRD
-				}
-				if = {
-					limit = {
-						NOT = {
-							owner = {
-								is_italian_tag = yes
-								is_subject_of = ROOT
-							}
-						}
-						is_claim_or_core_of_ROOT = no
-					}
-					add_claim_by = SRD
+				else_if = {
+					limit = { NOT = { is_core_of = ROOT } }
+					add_claim_by = ROOT
 				}
 			}
 			every_subject_country = {
@@ -1551,8 +1538,7 @@ focus_tree = {
 		y = 1
 
 		available = {
-			is_subject = no
-			is_in_faction_with = NFA
+			is_ally_with = NFA
 			NOT = { country_exists = FRA }
 		}
 		prerequisite = {
@@ -1747,15 +1733,15 @@ focus_tree = {
 				limit = { has_dlc_aat = yes }
 				custom_effect_tooltip = SRD_fate_of_fiat_tt_2_aat
 				effect_tooltip = {
-					mio:Italy_kr_fiat_tank_organisation = {
+					mio:ITALY_fiat_tank_organisation = {
 						add_mio_size = 4
 						add_mio_funds = 1000
 					}
-					mio:Italy_kr_fiat_aviazione_organisation = {
+					mio:ITALY_fiat_aviazione_organisation = {
 						add_mio_size = 4
 						add_mio_funds = 1000
 					}
-					mio:Italy_kr_fiat_motorised_organisation = {
+					mio:ITALY_fiat_motorised_organisation = {
 						add_mio_size = 4
 						add_mio_funds = 1000
 					}
@@ -1793,11 +1779,11 @@ focus_tree = {
 			if = {
 				limit = { has_dlc_aat = yes }
 				effect_tooltip = {
-					mio:Italy_kr_agnelli_carri_armati_organisation = {
+					mio:ITALY_agnelli_carri_armati_organisation = {
 						add_mio_size = 1
 						add_mio_funds = 500
 					}
-					mio:Italy_kr_automobili_agnelli_organisation = {
+					mio:ITALY_automobili_agnelli_organisation = {
 						add_mio_size = 1
 						add_mio_funds = 500
 					}
@@ -2456,12 +2442,12 @@ focus_tree = {
 			if = {
 				limit = { has_dlc_aat = yes }
 				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = Italy_kr_agnelli_carri_armati_organisation
-				show_mio_tooltip = Italy_kr_automobili_agnelli_organisation
-				mio:Italy_kr_agnelli_carri_armati_organisation = {
+				show_mio_tooltip = ITALY_agnelli_carri_armati_organisation
+				show_mio_tooltip = ITALY_automobili_agnelli_organisation
+				mio:ITALY_agnelli_carri_armati_organisation = {
 					add_mio_funds = 500
 				}
-				mio:Italy_kr_automobili_agnelli_organisation = {
+				mio:ITALY_automobili_agnelli_organisation = {
 					add_mio_size = 1
 					add_mio_funds = 500
 				}

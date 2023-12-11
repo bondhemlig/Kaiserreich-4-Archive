@@ -41,7 +41,6 @@ characters = {
 				large = "gfx/leaders/UKR/Portrait_UKR_Volodymyr_Vynnychenko.png"
 				small = "gfx/interface/advisors/UKR/UKR_volodymyr_vynnychenko.png"
 			}
-
 		}
 		country_leader = {
 			ideology = radical_socialist_subtype
@@ -1775,8 +1774,8 @@ characters = {
 			slot = high_command
 			ledger = army
 			idea_token = UKR_ivan_cherniakhovskyi
-			traits = { KR_MHC_armoured_3 }
-			cost = 200
+			traits = { KR_MHC_armoured_1 }
+			cost = 50
 		}
 	}
 	UKR_volodymyr_kedrovskyi = {

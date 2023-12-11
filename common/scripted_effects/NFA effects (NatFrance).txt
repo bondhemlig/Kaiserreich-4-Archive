@@ -661,7 +661,7 @@ NFA_create_loyalist_template = {
 			support = {
 				artillery = { x = 0 y = 0 }
 			}
-			template_counter = 73
+			template_counter = 82
 		}
 	}
 }
@@ -1028,6 +1028,26 @@ NFA_puppet_setup = {
 			limit = { 21 = { is_owned_and_controlled_by = PREV } }
 			add_state_core = 21
 			set_capital = { state = 21 remember_old_capital = no }
+		}
+	}
+}
+
+NFA_rio_de_oro_mauritanian_resistance_effect = {
+	699 = {
+		add_core_of = MRT
+		remove_core_of = MOR
+		add_claim_by = MOR
+		if = {
+			limit = {
+				has_resistance = yes
+				NOT = { occupied_country_tag = MRT }
+			}
+			set_temp_variable = { old_compliance = compliance }
+			set_temp_variable = { old_resistance = resistance }
+			cancel_resistance = yes
+			start_resistance = MRT
+			set_compliance = var:old_compliance
+			set_resistance = var:old_resistance
 		}
 	}
 }

@@ -1777,8 +1777,14 @@ foreign_politics = {
 			clr_global_flag = SER_keeping_the_pact
 			set_country_flag = { flag = SER_diplomatic_action days = 10 value = 1 }
 			if = {
-				limit = { SOV = { is_faction_leader = yes } }
-				SOV = { country_event = { id = serbia.38 days = 3 } }
+				limit = {
+					RUS = {
+						has_socialist_government = yes
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				RUS = { country_event = { id = serbia.38 days = 3 } }
 			}
 			else = {
 				FROM = { country_event = { id = serbia.38 days = 3 } }
@@ -1814,6 +1820,8 @@ foreign_politics = {
 			}
 			owns_state = 45 #Vojvodina
 			FROM = {
+				is_faction_leader = yes
+				has_socialist_government = no
 				NOT = { has_war_with = ROOT }
 			}
 		}
@@ -1824,6 +1832,8 @@ foreign_politics = {
 		}
 		target_trigger = {
 			FROM = {
+				is_faction_leader = yes
+				has_socialist_government = no
 				NOT = { has_war_with = ROOT }
 			}
 		}
@@ -1837,18 +1847,14 @@ foreign_politics = {
 			modifier = {
 				factor = 0
 				has_global_flag = SER_keeping_the_pact
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-				}
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
 			}
 			modifier = {
 				factor = 0
 				FROM = { surrender_progress > 0.20 }
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-				}
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
 			}
 			modifier = {
 				factor = 0
@@ -1858,10 +1864,8 @@ foreign_politics = {
 			modifier = {
 				factor = 0.05
 				has_completed_focus = SER_Pact_of_Organisation
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-				}
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
 			}
 			modifier = {
 				factor = 0
@@ -1982,12 +1986,10 @@ foreign_politics = {
 			modifier = {
 				factor = 0
 				has_global_flag = SER_keeping_the_pact
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN }
-				}
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN } }
 			}
 			modifier = {
 				factor = 0
@@ -2001,23 +2003,19 @@ foreign_politics = {
 			modifier = {
 				factor = 0
 				FROM = { surrender_progress > 0.20 }
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN }
-				}
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN } }
 			}
 			modifier = {
 				factor = 0
 				any_neighbor_country = { is_in_faction_with = GER }
 				FROM = { has_war_with = GER }
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN }
-				}
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN } }
 			}
 			modifier = {
 				factor = 0
@@ -2026,12 +2024,10 @@ foreign_politics = {
 			modifier = {
 				factor = 0.05
 				has_completed_focus = SER_Pact_of_Organisation
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN }
-				}
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN } }
 			}
 			modifier = {
 				factor = 0
@@ -2091,36 +2087,19 @@ foreign_politics = {
 					has_dictatorship_government = yes
 				}
 			}
-			NOT = {
-				GER = { is_in_faction_with = AUS }
-			}
-			NOT = {
-				has_idea = SER_YUG_special_relationship_idea
-			}
-			if = {
-				limit = {
-					NOT = { country_exists = SOV }
+			NOT = { GER = { is_in_faction_with = AUS } }
+			NOT = { has_idea = SER_YUG_special_relationship_idea }
+			OR = {
+				5 = {
+					controller = {
+						hidden_trigger = { is_in_faction = yes }
+						faction_leader = { has_socialist_government = yes }
+					}
 				}
-				any_neighbor_country = {
-					OR = {
-						is_in_faction_with = INT
-						is_in_faction_with = SOV
-					}
-					has_war_with = SER
-				}
-			}
-			else = {
-				OR = {
-					any_neighbor_country = {
-						OR = {
-							is_in_faction_with = INT
-							is_in_faction_with = SOV
-						}
-						has_war_with = SER
-					}
-					5 = {
-						controller = { is_in_faction_with = SOV } # Germany is losing and there is no Russia to protect us from syndies! better join now than regret later!
-					}
+				any_home_area_neighbor_country = {
+					has_war_with = ROOT
+					hidden_trigger = { is_in_faction = yes }
+					faction_leader = { has_socialist_government = yes }
 				}
 			}
 		}
@@ -2154,43 +2133,35 @@ foreign_politics = {
 			modifier = {
 				factor = 0
 				has_global_flag = SER_keeping_the_pact
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN }
-				}
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN } }
 			}
 			modifier = {
 				factor = 0
 				FROM = { surrender_progress > 0.20 }
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN }
-				}
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN } }
 			}
 			modifier = {
 				factor = 0
-				any_neighbor_country = { is_in_faction_with = RUS }
 				FROM = { has_war_with = RUS }
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN }
-				}
+				any_neighbor_country = { is_in_faction_with = RUS }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN } }
 			}
 			modifier = {
 				factor = 0.05
 				has_completed_focus = SER_Pact_of_Organisation
-				NOT = {
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN }
-					has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN }
-				}
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_INT_BEATEN } }
+				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN } }
 			}
 			modifier = {
 				factor = 0
@@ -2974,7 +2945,7 @@ SER_Balkan_Research_Initiative_decisions = {
 				limit = { NOT = { check_variable = { global.BPL_pact_of_organisation_building_slots = 0 } } }
 				set_variable = {
 					global.BPL_pact_of_organisation_building_slots = BPL_new_modifier
-					tooltip = global_building_slots_tooltip
+					tooltip = global_building_slots_factor_tooltip
 				}
 			}
 			if = {
@@ -3060,10 +3031,6 @@ SER_The_Road_To_Unification_decisions = {
 			else_if = {
 				limit = { is_in_faction_with = INT }
 				INT = { has_war_with = GER }
-			}
-			else_if = {
-				limit = { is_in_faction_with = SOV }
-				SOV = { has_war_with = GER }
 			}
 		}
 
@@ -3309,6 +3276,18 @@ SER_The_Road_To_Unification_decisions = {
 			log = "KR_Event_Logging;YUGOSLAVIA FORMED;[GetDateText]"
 			SER_enable_yugoslavia_integration = yes
 			custom_effect_tooltip = tooltip_white_line
+			CRO = {
+				every_character = {
+					limit = {
+						is_advisor = yes
+					}
+					set_character_flag = former_CRO # added in case Croatia returns into existance, so those advisors could return to that tag if an on_action or similar is added
+					set_nationality = {
+						target_country = SER
+						character = THIS
+					}
+				}
+			}
 			if = {
 				limit = {
 					OR = {

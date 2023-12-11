@@ -1836,7 +1836,7 @@ country_event = { #LIT detaches from GER..Somewhat
 		effect_tooltip = {
 			set_autonomy = {
 				target = LIT
-				autonomy_state = kr_oststaat_autonomous
+				autonomy_state = oststaat_autonomous
 				end_wars = no
 			}
 		}
@@ -1860,7 +1860,7 @@ country_event = { #LIT moves away
 		GER = {
 			set_autonomy = {
 				target = ROOT
-				autonomy_state = kr_oststaat_autonomous
+				autonomy_state = oststaat_autonomous
 				end_wars = no
 			}
 		}
@@ -2693,6 +2693,7 @@ country_event = { #The King steps in
 			remove_ideas = LIT_military_funding_cuts_2
 			remove_ideas = LIT_social_economy_idea
 			remove_ideas = LIT_welfare_state
+			add_ideas = LIT_increased_welfare_spending
 		}
 	}
 }
@@ -2867,11 +2868,16 @@ country_event = { #LIT notification of GER war declaration
 			popularity = 0.02
 		}
 		if = {
-			limit = { SOV = { is_faction_leader = yes } }
-			SOV = { country_event = LIT.215 }
+			limit = {
+				RUS = {
+					has_socialist_government = yes
+					is_faction_leader = yes
+				}
+			}
+			RUS = { country_event = LIT.215 }
 		}
 		else = {
-			FRA = { country_event = LIT.215 }
+			INT = { country_event = LIT.215 }
 		}
 	}
 }
@@ -2895,7 +2901,7 @@ country_event = { #LIT applies for Internationale
 	option = { # Accept
 		log = "[GetLogInfo]: event LIT.215 option LIT.215.b"
 		name = LIT.215.b
-		add_to_faction = LIT
+		add_to_faction = FROM
 	}
 }
 

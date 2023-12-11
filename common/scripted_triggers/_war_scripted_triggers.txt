@@ -5,13 +5,6 @@ second_weltkrieg_can_start = {
 	}
 }
 
-# Civil Wars
-russian_civil_war = {
-	RUS = {
-		has_war_with = SOV
-	}
-}
-
 spanish_civil_war = {
 	SPA = { has_civil_war = yes }
 }
@@ -149,8 +142,53 @@ minor_faction_member_cannot_start_inter_faction_war_before_wk = {
 		limit = {
 			is_in_faction = yes
 			is_faction_leader = no
-			faction_leader = { is_actual_major = yes }
 			FROM = {
+				OR = {
+					AND = {
+						is_in_faction = yes
+						faction_leader = {
+							NOT = { has_war_with = ROOT }
+							NOT = { has_war_with = ROOT.faction_leader }
+						}
+					}
+					AND = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								is_major = yes
+								is_in_faction = yes
+							}
+							NOT = { has_war_with = ROOT }
+							NOT = { has_war_with = ROOT.faction_leader }
+						}
+					}
+					AND = {
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								is_major = yes
+								is_in_faction = yes
+							}
+							NOT = { has_war_with = ROOT }
+							NOT = { has_war_with = ROOT.faction_leader }
+						}
+					}
+				}
+			}
+		}
+		second_weltkrieg_can_start = yes
+	}
+}
+
+minor_faction_member_cannot_start_inter_faction_war_before_wk_focus = {
+	if = {
+		limit = {
+			is_in_faction = yes
+			is_faction_leader = no
+			faction_leader = { is_actual_major = yes }
+			var:target = {
 				OR = {
 					AND = {
 						is_in_faction = yes

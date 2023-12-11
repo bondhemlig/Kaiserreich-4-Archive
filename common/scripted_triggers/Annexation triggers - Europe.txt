@@ -81,45 +81,38 @@ can_release_aosta = {
 	ROOT = { tag = NFA }
 }
 
-#Ardennes - annexation_ARDENNES_CONQ
-can_release_ardennes = {
-	state = 741 #Ardennes
+#Verviers - annexation_VERVIERS_CONQ
+can_release_verviers = {
+	state = 741 #Verviers
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
 		should_release_france_first = yes
 		should_release_germany_first = yes
 		should_release_wallonia_first = yes
-		# do Luxembourgish release first
 		OR = {
-			has_country_flag = LUX_CONQ
-			8 = { is_valid_annexation_state = no } #Luxembourg
-		}
-		OR = {
-			tag = BEL
+			tag = BLG
 			tag = WAL
 			AND = {
-				owns_state = 8 #Luxembourg
-				OR = {
-					is_french_tag = yes
-					is_germany_or_splinter_tag = yes
-				}
+				is_french_tag = yes
+				owns_state = 948 #Liege
+			}
+			AND = {
+				is_germany_or_splinter_tag = yes
+				owns_state = 781 #Western Rhineland
 			}
 			var:948.owner = {
 				OR = {
-					tag = BEL
-					tag = WAL
+					tag = BLG
+					original_tag = WAL
 				}
 				ROOT_can_grant_land = yes
 			}
-			var:8.owner = {
-				is_ally_with = ROOT
-				OR = {
-					is_french_tag = yes
-					is_germany_or_splinter_tag = yes
-				}
+			var:781.owner = { #Western Rhineland
+				is_germany_or_splinter_tag = yes
+				ROOT_can_grant_land = yes
 			}
 		}
-		NOT = { has_country_flag = ARDENNES_CONQ }
+		NOT = { has_country_flag = VERVIERS_CONQ }
 	}
 }
 
@@ -274,11 +267,8 @@ can_release_south_germany = {
 	ROOT = {
 		should_release_germany_first = yes
 		should_release_north_germany_first = yes
-		NOT = {
-			is_germany_or_splinter_tag = yes
-			is_ally_with = BAY
-			has_country_flag = BAY_CONQ
-		}
+		BAY = { is_ally_of_ROOT = no }
+		NOT = { has_country_flag = BAY_CONQ }
 	}
 }
 
@@ -979,10 +969,35 @@ can_release_east_oder = {
 		else = {
 			should_release_north_germany_first = yes
 		}
-		NOT = {
+		OR = {
+			NOT = { country_exists = PRE }
+			var:64.owner = { #Brandenburg
+				is_germany_or_splinter_tag = yes
+				ROOT_can_grant_land = yes
+			}
+			var:62.owner = { #Farther Pomerania
+				is_germany_or_splinter_tag = yes
+				ROOT_can_grant_land = yes
+			}
 			is_germany_or_splinter_tag = yes
-			has_country_flag = EAST_ODER_CONQ
+			GEX = { is_ally_of_ROOT = yes }
+			AND = {
+				POL = { is_ally_of_ROOT = yes }
+				country_exists = PRE
+				NOT = { is_ally_with = PRE }
+				NOT = {
+					var:64.owner = { #Brandenburg
+						is_germany_or_splinter_tag = yes
+						ROOT_can_grant_land = yes
+					}
+					var:62.owner = { #Farther Pomerania
+						is_germany_or_splinter_tag = yes
+						ROOT_can_grant_land = yes
+					}
+				}
+			}
 		}
+		NOT = { has_country_flag = EAST_ODER_CONQ }
 	}
 }
 
@@ -1750,7 +1765,7 @@ can_release_luxembourg = {
 				is_french_tag = yes
 				ROOT_can_grant_land = yes
 			}
-			var:741.owner = { #Ardennes
+			var:948.owner = { #Liège
 				is_french_tag = yes
 				ROOT_can_grant_land = yes
 			}
@@ -1920,11 +1935,8 @@ can_release_north_germany = {
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
 		should_release_germany_first = yes
-		NOT = {
-			is_germany_or_splinter_tag = yes
-			is_ally_with = NGF
-			has_country_flag = NGF_CONQ
-		}
+		NGF = { is_ally_of_ROOT = no }
+		NOT = { has_country_flag = NGF_CONQ }
 	}
 }
 
@@ -2442,10 +2454,7 @@ can_release_brandenburg = {
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
 		should_release_north_germany_first = yes
-		NOT = {
-			is_germany_or_splinter_tag = yes
-			has_country_flag = PRE_CONQ
-		}
+		NOT = { has_country_flag = PRE_CONQ }
 	}
 }
 
@@ -2465,11 +2474,8 @@ can_release_rhineland = {
 		}
 		should_release_germany_first = yes
 		should_release_north_germany_first = yes
-		NOT = {
-			is_germany_or_splinter_tag = yes
-			is_ally_with = RHI
-			has_country_flag = RHI_CONQ
-		}
+		RHI = { is_ally_of_ROOT = no }
+		NOT = { has_country_flag = RHI_CONQ }
 	}
 }
 
@@ -2565,7 +2571,6 @@ can_release_russia = {
 		NOT = {
 			has_country_flag = RUS_CONQ
 			country_exists = RUS
-			country_exists = SOV
 		}
 	}
 }
@@ -3839,7 +3844,6 @@ should_release_romania_first = {
 should_release_russia_first = {
 	OR = {
 		country_exists = RUS
-		country_exists = SOV
 		has_country_flag = RUS_CONQ
 		219 = { is_valid_annexation_state = no } #Moscow
 	}

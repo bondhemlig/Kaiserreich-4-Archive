@@ -3,7 +3,8 @@
  KR_Siam: "[SIA.GetSIAshortname] Focus Tree"
 
 ### World Tension ###
- SIA_revolution_threat: "Revolution in Siam"
+ SIA_SiaCW_RadSoc_threat: "Socialist Regime in Siam"
+ SIA_SiaCW_PatAut_threat: "German-leaning Regime in Siam"
 
 ### Traits ###
  SIA_iron_marshal_trait: "The Iron Field Marshal\n§gBeing known for his charismatic and cunning leadership since his interwar years in Burma, it is no surprise that Phibun would eventually land himself on top of the pecking order. His obsession for total control of the state affairs and his attitude of side-lining the monarchy earned him another nickname - \"Siamese Cao Cao/Caesar\".§!"
@@ -156,7 +157,7 @@
  SIA_SiaCW_div_limit_bonus_desc: "People from all levels of the society all participate in the civil war one way or another. Some do it to protect their loved ones, others fight for what they believe to be their righteous cause."
 
 ### Custom Tooltip ###
- SIA_PHRAYA_PHAHON_ELECTED: "Savaeng Piampongsarn of the Kijsangkhom Party has been elected"
+ SIA_PHRAYA_PHAHON_ELECTED: "Sawaet Piampongsan of the Kijsangkhom Party has been elected"
  SIA_PRIDI_PANOMYONG_ELECTED_ELECTED: "Pridi Phanomyong of the Sahachip Party has been elected"
  SIA_SENI_PRAMOJ_ELECTED: "Seni Pramoj of the Prachatipat Party has been elected"
  SIA_CONSTITUTION_GIVEN: "The constitution drafted by King Prajadhipok has been passed by the Apiratthamontri Sapha"
@@ -582,7 +583,8 @@
  siam.54.a: "Cheers for the ladies."
 
  siam.55.t: "Creation of the Ministry of Transportation"
- siam.55.d: "Originally part of the Ministry of Interior - the Department of Highways, the Department of Railways, the Department of Air Transportation and the Port Authority will now form a new separate Ministry in an effort to facilitate the construction of new highways and railways connecting major cities throughout the country. While ambitious the Ministry itself lacks the manpower to fulfil the plan by itself. Some suggest that we hire [GetSIAEngineers] engineers to help us until those we sent to study overseas return home."
+ siam.55.d.specific: "Originally part of the Ministry of Interior - the Department of Highways, the Department of Railways, the Department of Air Transportation and the Port Authority will now form a new separate Ministry in an effort to facilitate the construction of new highways and railways connecting major cities throughout the country. While ambitious the Ministry itself lacks the manpower to fulfil the plan by itself. Some suggest that we hire [SIA_engineers_target.GetAdjective] engineers to help us until those we sent to study overseas return home."
+ siam.55.d.fallback: "Originally part of the Ministry of Interior - the Department of Highways, the Department of Railways, the Department of Air Transportation and the Port Authority will now form a new separate Ministry in an effort to facilitate the construction of new highways and railways connecting major cities throughout the country. While ambitious the Ministry itself lacks the manpower to fulfil the plan by itself. Some suggest that we hire foreign engineers to help us until those we sent to study overseas return home."
  siam.55.a: "Let's hire those engineers again."
  siam.55.b: "We shall stand on our own two feet."
 
@@ -789,7 +791,7 @@
  SIA_statewelfare: "State Welfare"
  SIA_statewelfare_desc: "By providing welfare to our citizens using the state funds, we can ensure that all of the [SIA.GetProperAdjective] people will receive access to proper medical care, education, and other support. This will, however, come with the trade-off of high taxes which will alienate the capitalists."
  SIA_aliberalsiam: "A Liberal [SIA.GetSIAshortname]!"
- SIA_aliberalsiam_desc: "Savaeng Piampongsarn, a graduate from Rayong who studied law, is currently the leader of the liberal/progressive faction within the Ratthasapha. Taking inspiration from the Japanese-style of democracy during the Taisho era, he has promised to deliver the people both peace and prosperity."
+ SIA_aliberalsiam_desc: "Sawaet Piampongsan, a graduate from Rayong who studied law, is currently the leader of the liberal/progressive faction within the Ratthasapha. Taking inspiration from the Japanese-style of democracy during the Taisho era, he has promised to deliver the people both peace and prosperity."
  SIA_landsofthefree: "Land of the Free!"
  SIA_landsofthefree_desc: "Having emerged victorious from the election, one of Piampongsarn's first initiatives is to enact a policy that will promote equal rights within the nation and recognise the Laotian, Mon, Malay, Chinese, and Cambodian peoples; alongside the native [SIA.GetProperAdjective] people."
  SIA_newsiamsociety: "A New [SIA.GetProperAdjective] Society"
@@ -1431,7 +1433,7 @@
 
  SIA_phot_phahonyothin: "Phot Phahonyothin"
  SIA_phot_phahonyothin_royal: "Phraya Phahonphonpayuhasena"
- SIA_phot_phahonyothin_commander_desc: "§YGeneral Description\nBorn:§! §gMarch 29th, 1887, in Phra Nakhon Province, Monthon Krungthep, Kingdom of Siam§!\n§YMilitary Career:§! §gBorn as Phot Phahonyothin to a Thai-Teochew Chinese father, Colonel Kim Phahonyothin, and a Thai-Mon mother, Chap Phahonyothin. Phahon entered the Royal Siamese Army Cadet School in 1901 and graduated with the highest score. He was later sent by Royal Scholarship to study at the Kadettenschule in Potsdam, then Royal Prussian Main Cadet Institute at Groß-Lichterfelde in Berlin, where he became a classmate of Hermann von Göring and an acquaintance of Hideki Tojo through Sword duels. Phahon continued his studies at the Engineering College of Copenhagen in Denmark. However, he only managed to study there for one year before being forced to return to Siam in 1912 as his scholarship fund ran out.\n\nPhraya Phahonphonpayuhasena (Phot Phahonyothin) later acted as a founding core member of the \"The Musketeers\", the influential clique of post-Weltkrieg officers, with Phahon himself serving as the Deputy Inspector of Artillery.§!\n\n§YNotes: Is an upright person, perhaps too much, since he expects everyone to treat him the same way he does to others and is quite shy to strangers in general."
+ SIA_phot_phahonyothin_commander_desc: "§YGeneral Description\nBorn:§! §gMarch 29th, 1887, in Phra Nakhon Province, Monthon Krungthep, Kingdom of Siam§!\n§YMilitary Career:§! §gBorn as Phot Phahonyothin to a Thai-Teochew Chinese father, Colonel Kim Phahonyothin, and a Thai-Mon mother, Chap Phahonyothin. Phahon entered the Royal Siamese Army Cadet School in 1901 and graduated with the highest score. He was later sent by Royal Scholarship to study at the Kadettenschule in Potsdam, then Royal Prussian Main Cadet Institute at Groß-Lichterfelde in Berlin, where he became a classmate of the would-be German flying ace Hermann von Göring and an acquaintance of Japanese general Hideki Tojo through sword duel. Phahon continued his studies at the Engineering College of Copenhagen in Denmark. However, he only managed to study there for one year before being forced to return to Siam in 1912 as his scholarship fund ran out.\n\nPhraya Phahonphonpayuhasena (Phot Phahonyothin) later acted as a founding core member of the \"The Musketeers\", the influential clique of post-Weltkrieg officers, with Phahon himself serving as the Deputy Inspector of Artillery.§!\n\n§YNotes: Is an upright person, perhaps too much, since he expects everyone to treat him the same way he does to others and is quite shy to strangers in general."
 
  SIA_din_tharab: "Din Tharab"
  SIA_din_tharab_royal: "Phraya Srisitthisongkhram"
@@ -1596,7 +1598,7 @@
  SIA_military_medal_santimala_desc: "Also known as \"Rian Santi Mala\" (Santi Mala Medal), this medal is award for those who fought to help preserve the independence of the [SIA.GetProperAdjective] nation."
  # Bravery Medal
  SIA_military_medal_klaharn: "Klaharn Medal"
- SIA_military_medal_klaharn_desc: "Also known as \"Rian Klaharn\" and previously awarded as \"Rian Dushdi Mala Khem Klaharn\" (Dushdi Mala Medal (Bravery)) - this medal is awarded for those who fought bravely in the battlefield. Should that person or unit be eligible for 2 or more Bravery Medal, golden "Chor Chaiyapruk" (Wreath of Victory) pin(s) will instead be attached to the ribbon of the existing medal."
+ SIA_military_medal_klaharn_desc: "Also known as \"Rian Klaharn\" and previously awarded as \"Rian Dushdi Mala Khem Klaharn\" (Dushdi Mala Medal (Bravery)) — this medal is awarded for those who fought bravely in the battlefield. Should that person or unit be eligible for 2 or more Bravery Medal, golden "Chor Chaiyapruk" (Wreath of Victory) pin(s) will instead be attached to the ribbon of the existing medal."
  SIA_military_medal_rammala: "Order of Rama (6th Class)"
  SIA_military_medal_rammala_desc: "Also known as \"Rian Ram Mala\" (Ram Mala Medal), first established in 1919, this medal serves as the 2nd highest medal for acts of bravery."
  SIA_military_medal_rammala_gallantry_in_action: "Order of Rama (Gallantry in Action)"

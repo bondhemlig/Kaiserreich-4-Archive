@@ -27,6 +27,10 @@
 #	# if gfx key GFX_my_MIO_token exists, use it
 #	# else use GFX_idea_unknown
 #
+#	background = GFX_key # optional
+#	# gfx key of the background image for the Details window
+#	# if not specified, one of standard backgrounds will be used based on supported equipment types
+#
 #	allowed = { ... } # mandatory
 #   # country scope
 #   # allowed is evaluated when starting the game for all countries (even the ones that don't exist yet)
@@ -223,7 +227,7 @@
 #		# All parameters are eligible
 #		delete_included_values = { equipment_bonus relative_position_id ...  }
 #   }
-#	# !Warning! if included and including MIO are in 2 seperate files, you will need to "save" the 2 files to hot-reload the result.
+#	# !Warning! if included and including MIO are in 2 separate files, you will need to "save" the 2 files to hot-reload the result.
 # }
 # NB: there are no load order constriction when using include. The included MIO just needs to exists somewhere in the organizations directory.
 

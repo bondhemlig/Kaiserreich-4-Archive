@@ -1029,7 +1029,6 @@ CHI_military_expeditions_category = {
 			add_one_random_military_factory = yes
 		}
 	}
-
 }
 
 CHI_outer_party_category = {
@@ -1181,7 +1180,7 @@ CHI_outer_party_category = {
 					has_capitulated = no
 					has_socialist_government = yes
 				}
-				SOV = {
+				RUS = {
 					exists = yes
 					has_capitulated = no
 					has_socialist_government = yes
@@ -3340,7 +3339,6 @@ CHI_liberation_of_asia_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CHI_disband_liberation_armies_decision"
 			delete_unit_template_and_units = { division_template = "Liberation Army Division" disband = yes }
 		}
-
 	}
 
 	CHI_KOR_liberation_army_decision = { #Form the Korean Volunteer Corps
@@ -3695,27 +3693,10 @@ CHI_liberation_of_asia_category = {
 		allowed = { always = no }
 
 		available = {
-			FROM = {
-				if = {
-					limit = {
-						OR = {
-							tag = PER
-							tag = TUR
-						}
-					}
-					custom_trigger_tooltip = { tooltip = tooltip_white_line }
-					OR = {
-						any_neighbor_country = { is_in_faction_with = CHI }
-						AND = {
-							has_war_with = RUS
-							ROOT = { has_war_with = RUS }
-							at_peace_or_same_enemies_as_ROOT = yes
-						}
-					}
-					NOT = { TUR = { has_war_with = PER } }
-				}
-			}
+			at_peace_or_same_enemies_as_FROM = yes
+			FROM = { at_peace_or_same_enemies_as_ROOT = yes }
 		}
+
 		target_non_existing = yes
 		visible = {
 			is_faction_leader = yes
@@ -3723,6 +3704,7 @@ CHI_liberation_of_asia_category = {
 				exists = yes
 				is_subject = no
 				is_in_faction = no
+				has_capitulated = no
 				OR = {
 					has_socialist_government = yes
 					AND = {

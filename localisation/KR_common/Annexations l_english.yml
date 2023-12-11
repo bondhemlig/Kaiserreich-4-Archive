@@ -35,6 +35,7 @@
 
  annex.europe.give_to_gex: "[GEX.GetGrantTerritoryEventOption]"
 
+ annex.africa.give_to_france: "[france.GetGrantTerritoryEventOption]"
  annex.africa.give_to_maf: "[MAF.GetGrantTerritoryEventOption]"
  annex.africa.give_to_cmr: "[CMR.GetGrantTerritoryEventOption]"
  annex.africa.give_to_tzn: "[TZN.GetGrantTerritoryEventOption]"
@@ -284,9 +285,14 @@
 
  annexation_POL_CONQ: "The Fate of Poland"
  annexation_POL_CONQ_desc: "Our soldiers are marching through the streets of Warsaw after the Polish army surrendered early yesterday afternoon. Now we must decide what to do with their lands"
- annex.1014.a: "Release a loyal Polish state."
- annex.1014.b: "Release Poland and grant them Galicia."
- annex.1014.c: "Annex the Polish lands."
+ annex.1014.a: "Release a Polish republic."
+ annex.1014.b: "Release a Polish republic and include Galicia."
+ annex.1014.c: "Restore the Hohenzollern monarchy."
+ annex.1014.d: "Restore the Hohenzollern monarchy and include Galicia."
+ annex.1014.e: "Install a Habsburg monarchy."
+ annex.1014.f: "Install a Habsburg monarchy and include Galicia."
+ annex.1014.g: "Establish German military rule."
+ annex.1014.h: "Annex the Polish lands."
 
  annexation_BIALYSTOK_CONQ: "The Fate of [97.GetName]"
  annexation_BIALYSTOK_CONQ_desc: "The region around [97.GetName] is now under our control, we must decide what to do with it."
@@ -533,7 +539,6 @@
  annexation_IRE_CONQ_desc_ENG: "Our men march through Dublin, and the Irish Republican Army has shattered in the face of our armed forces. In the meantime, we must decide on the future of Ireland. Some argue that Ireland should be annexed into the Union of Britain, while others argue that this would be an act of unsocialist imperialism and that doing so would not be supported by the Irish people, bringing us into a bloody guerrilla war."
  annex.1047.a: "They shall have their independence."
  annex.1047.c: "Southern Ireland will be granted limited self-government."
- annex.1047.d: "The Irish Free State will join the Commonwealth."
  annex.1047.e: "The time has come for direct rule once again."
  annex.1047.f: "Ireland will be granted limited self-government."
  annex.1047.g: "Set up an Irish socialist republic!"
@@ -639,12 +644,15 @@
 
  annexation_POLESIA_CONQ: "The Fate of Polesia"
  annexation_POLESIA_CONQ_desc: "The quiet region of Polesia has been brought under our control as our troops occupy it. We must now decide what to do with it."
+ annex.1062.a: "Give it to [ukraine.GetNameDef]"
+ annex.1062.b: "Give it to [belarus.GetNameDef]"
 
  annexation_WHR_CONQ: "The Fate of White Ruthenia"
  annexation_WHR_CONQ_desc: "After a short campaign across Belarus, we have managed to shatter the defences of Minsk. White Ruthenia is now in our hands! We must now decide on the future of it."
- annex.1063.a: "Liberate White Ruthenia under a friendly government!"
- annex.1063.b: "Reintegrate the Ruthenian lands."
+ annex.1063.a: "Liberate White Ruthenia under a friendly government."
+ annex.1063.b: "Liberate White Ruthenia under German military rule."
  annex.1063.c: "Give it to our Russian allies."
+ annex.1063.d: "Reintegrate the Ruthenian lands."
 
  annexation_EASTERN_BELARUS_CONQ: "The Fate of Eastern Belarus"
  annexation_EASTERN_BELARUS_CONQ_desc: "The formerly Russian-held region of Eastern Belarus is now under our control, we must decide what to do with it."
@@ -768,7 +776,7 @@
  annex.1084.d: "Restore the Kingdom, but split off the Basque Country, Galicia and Catalonia."
  annex.1084.e: "Liberate a republican Spain."
  annex.1084.f: "Liberate a republican Spain, but split off the Basque Country, Galicia and Catalonia."
- annex.1084.g: "Occupy the Spanish heartlands - we will decide what to do with the rest of the territory individually."
+ annex.1084.g: "Occupy the Spanish heartland - we will decide what to do with the rest of Spain individually."
 
  annexation_GLC_CONQ: "The Fate of Galicia"
  annexation_GLC_CONQ_desc: "The entire Galicia region has been brought under our control. Currently, our armed forces are facing some opposition from the local populations. We could leave it up to local governments in the region to take care of any dissent."
@@ -849,13 +857,14 @@
 
  annexation_EMI_CONQ: "The Fate of Emilia"
  annexation_EMI_CONQ_desc: "Our armies have taken control of Emilia, and the locals are clamouring for self-government. We should decide what's to be done with the region, as it would be difficult and expensive to hold otherwise."
- annex.1097.a: "Release Modena as a puppet"
+ annex.1097.a: "Release a republican Modena"
+ annex.1097.b: "Restore the Duchy of Modena"
+ annex.1097.c: "Restore the Duchy of Parma"
 
  annexation_TUS_CONQ: "The Fate of Tuscany"
  annexation_TUS_CONQ_desc: "Our armies have taken control of Tuscany, and the locals are clamouring for self-government. We should decide what's to be done with the region, as it would be difficult and expensive to hold otherwise."
  annex.1098.a: "Release the Grand Duchy of Tuscany as a puppet"
  annex.1098.b: "Release the Republic of Tuscany as a puppet"
- annex.1097.b: "Release Parma as a puppet"
 
  annexation_PAP_STATES_CONQ: "The Fate of Central Italy"
  annexation_PAP_STATES_CONQ_desc: "Our armies have taken control of Central Italy, the portion which was once under the control of the Papal States, and the locals are clamouring for self-government. We should decide what's to be done with the region, as it would be difficult and expensive to hold otherwise."
@@ -887,11 +896,10 @@
  annex.1103.e: "[SRD.GetGrantTerritoryEventOption]"
  annex.1103.f: "[SIC.GetGrantTerritoryEventOption]"
 
- annexation_ARDENNES_CONQ: "The Fate of the Ardennes"
- annexation_ARDENNES_CONQ_desc: "The forested, sparsely populated region of the Ardennes is now under our control, we must decide what to do with it."
- annex.1104.a: "Give it to [BEL.GetNameDef]"
- annex.1104.b: "Give it to [LUX.GetNameDef]"
- annex.1104.c: "Give it to [8.owner.GetNameDef]"
+ annexation_VERVIERS_CONQ: "The Fate of [741.GetName]"
+ annexation_VERVIERS_CONQ_desc: "The Belgian border region of Verviers is now under our control, we must decide what to do with it."
+ annex.1104.a: "[belgium.GetGrantTerritoryEventOption]"
+ annex.1104.b: "[germany.GetGrantTerritoryEventOption]"
 
  annexation_TESCHEN_CONQ: "The Fate of [924.GetName]"
  annexation_TESCHEN_CONQ_desc: "Formerly a Duchy of the Austrian Crown, [924.GetName] is home to Poles, Czechs and Germans alike. Now, we must decide what to do with it."
@@ -1354,7 +1362,7 @@
  annexation_TRM_CONQ: "The Fate of the Russian Far East"
  annexation_TRM_CONQ_desc: "Our armies have managed to take control of the Russian Far East, and it is now occupied by us. We have a few options now. We can either puppet the land or take it for ourselves, seeing as it possesses a key strategic position in East Asia. What shall we do?"
  annex.3009.a: "Liberate the Far Eastern Republic."
- annex.3009.b: "[566.Owner.GetGrantTerritoryEventOption]"
+ annex.3009.b: "[RUS.GetGrantTerritoryEventOption]"
  annex.3009.c: "[SIB.GetGrantTerritoryEventOption]"
  annex.3009.d: "[TRM.GetGrantTerritoryEventOption]"
  annex.3009.e: "[MAN.GetGrantTerritoryEventOption]"
@@ -1973,14 +1981,14 @@
 
  annexation_RIO_DE_ORO_CONQ: "The Fate of Rio de Oro"
  annexation_RIO_DE_ORO_CONQ_desc: "The desert region of Rio de Oro is now under our control, we must decide what to do with it."
- annex.5023.a: "Give it to [MOR.GetNameDef]"
- annex.5023.b: "Give it to [MRT.GetNameDef]"
- annex.5023.c: "Give it to [NFA.GetNameDef]"
+ annex.5023.a: "[morocco.GetGrantTerritoryEventOption]"
+ annex.5023.b: "[mauritania.GetGrantTerritoryEventOption]"
+ annex.5023.c: "[france_morocco.GetGrantTerritoryEventOption]"
+ annex.5023.d: "[france_mauritania.GetGrantTerritoryEventOption]"
 
  annexation_ALG_CONQ: "The Fate of Algeria"
  annexation_ALG_CONQ_desc: "We finally freed Algeria from the French tyrants in Algiers. Should we give the Algerians freedom?"
  annex.5024.a: "Liberate a loyal Algeria."
- annex.5024.b: "Give it to [21.Owner.GetNameDef]."
 
  annexation_TUN_CONQ: "The Fate of Tunisia"
  annexation_TUN_CONQ_desc: "After overwhelming the Tunisian defences, we have launched a full offensive and Tunis is now in our hands, along with the rest of Tunisia. The Bey and several nationalists are clamouring for self-governance, and some suggest they should be granted it. Alternatively, we could continue to occupy Tunisia. What should we do?"
@@ -1998,8 +2006,8 @@
 
  annexation_DJIBOUTI_CONQ: "The Fate of [268.GetName]"
  annexation_DJIBOUTI_CONQ_desc: "We now control [268.GetName] but we have a puppet close that might be better off handling the territory, should we give it to them?"
- annex.5028.a: "Transfer it to [SOM.GetNameDef]"
- annex.5028.b: "Transfer it to [ETH.GetNameDef]"
+ annex.5028.a: "[SOM.GetGrantTerritoryEventOption]"
+ annex.5028.b: "[ETH.GetGrantTerritoryEventOption]"
 
  annexation_SOM_CONQ: "The Fate of Somalia"
  annexation_SOM_CONQ_desc: "We now control the territories of the former Dervish state of Somalia and this inhospitable area populated by Somalis will prove itself to be hard to maintain through occupation, maybe we should let the Somalis organise themselves to an extent?"

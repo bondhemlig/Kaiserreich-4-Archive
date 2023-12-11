@@ -93,7 +93,10 @@ characters = {
 			slot = political_advisor
 			idea_token = BHU_sonam_topgye_dorji_advisor
 			available = {
-				has_country_flag = BHU_ref_favored
+				OR = {
+					has_country_flag = BHU_jw_win
+					has_country_flag = BHU_ref_favored
+				}
 				OR = {
 					has_idea = BHU_feudal_5
 					has_idea = BHU_feudal_6
@@ -111,7 +114,6 @@ characters = {
 					has_country_flag = BHU_jw_win
 					has_country_flag = BHU_st_win
 				}
-				not_already_hired_except_as = army_chief
 			}
 			traits = { KR_army_chief_planning_1 }
 			cost = 50
@@ -261,7 +263,10 @@ characters = {
 			slot = political_advisor
 			idea_token = BHU_namgyal_bahadur_advisor
 			available = {
-				has_country_flag = BHU_con_favored
+				OR = {
+					has_country_flag = BHU_con_favored
+					has_government = paternal_autocrat
+				}
 				OR = {
 					has_idea = BHU_feudal_5
 					has_idea = BHU_feudal_6
@@ -380,7 +385,7 @@ characters = {
 			idea_token = BHU_chimi_dorji_rabden
 			available = {
 				OR = {
-					has_country_flag = BHU_tp_win
+					has_government = paternal_autocrat
 					has_country_flag = BHU_con_favored
 				}
 				OR = {

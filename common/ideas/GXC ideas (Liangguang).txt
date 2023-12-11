@@ -212,6 +212,7 @@ ideas = {
 		}
 		GXC_modernised_economy_authdem_dummy1 = {
 			name = GXC_merge_eco_spirit_dummy
+			picture = WIP
 			modifier = {
 				production_lack_of_resource_penalty_factor = -0.15
 				local_resources_factor = 0.1
@@ -227,6 +228,7 @@ ideas = {
 		}
 		GXC_modernised_economy_authdem_dummy2 = {
 			name = GXC_merge_eco_spirit_dummy
+			picture = WIP
 			modifier = {
 				production_factory_start_efficiency_factor = 0.1
 				production_factory_max_efficiency_factor = 0.05
@@ -254,6 +256,7 @@ ideas = {
 		}
 		GXC_warlord_economy_idea_dummy1 = {
 			name = GXC_merge_eco_spirit_dummy
+			picture = WIP
 			modifier = {
 				production_lack_of_resource_penalty_factor = -0.15
 				local_resources_factor = 0.1
@@ -268,6 +271,7 @@ ideas = {
 		}
 		GXC_warlord_economy_idea_dummy2 = {
 			name = GXC_merge_eco_spirit_dummy
+			picture = WIP
 			modifier = {
 				consumer_goods_factor = -0.3
 				political_power_factor = -0.10
@@ -459,7 +463,7 @@ ideas = {
 		GXC_model_province_one = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GXC_model_province_one" }
 			name = GXC_model_province
-			picture = GXC_model_province
+			picture = YUN_Federalist_idea
 			allowed = { original_tag = GXC }
 			allowed_civil_war = { GXC_has_federalist_government = yes }
 			modifier = {
@@ -476,7 +480,7 @@ ideas = {
 		GXC_model_province_two = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GXC_model_province_two" }
 			name = GXC_model_province
-			picture = GXC_model_province
+			picture = YUN_Federalist_idea
 			allowed = { original_tag = GXC }
 			allowed_civil_war = { GXC_has_federalist_government = yes }
 			modifier = {
@@ -494,7 +498,7 @@ ideas = {
 		GXC_model_province_three = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GXC_model_province_three" }
 			name = GXC_model_province
-			picture = GXC_model_province
+			picture = YUN_Federalist_idea
 			allowed = { original_tag = GXC }
 			allowed_civil_war = { GXC_has_federalist_government = yes }
 			modifier = {
@@ -513,7 +517,7 @@ ideas = {
 		GXC_model_province_four = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GXC_model_province_four" }
 			name = GXC_model_province
-			picture = GXC_model_province
+			picture = YUN_Federalist_idea
 			allowed = { original_tag = GXC }
 			allowed_civil_war = { GXC_has_federalist_government = yes }
 			modifier = {

@@ -73,7 +73,7 @@ focus_tree = {
 				add_idea = SCO_democratic_transition
 			}
 			hidden_effect = {
-				create_snp_right = yes
+				SCO_create_snp_right = yes
 				random_list = {
 					30 = {
 						meta_effect = {
@@ -1775,6 +1775,12 @@ focus_tree = {
 		y = 1
 
 		prerequisite = { focus = SCO_invite_foreign_advisors focus = SCO_recruit_republicans }
+		available = {
+			ENG = {
+				has_design_based_on = small_plane_airframe
+				has_design_based_on = medium_plane_airframe
+			}
+		}
 
 		ai_will_do = { base = 50 }
 

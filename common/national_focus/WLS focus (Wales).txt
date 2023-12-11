@@ -1202,6 +1202,9 @@ focus_tree = {
 		y = 3
 
 		prerequisite = { focus = WLS_Raid_Weapon_Caches }
+		available = {
+			ENG = { has_design_based_on = small_plane_airframe }
+		}
 
 		ai_will_do = { base = 100 }
 
@@ -1463,7 +1466,7 @@ focus_tree = {
 
 	focus = {
 		id = WLS_Communalise_Heavy_Industry
-		icon = GFX_goal_manage_industries
+		icon = GFX_focus_DEN_limited_regulations
 		cost = 5
 
 		relative_position_id = WLS_Home_of_the_Revolution

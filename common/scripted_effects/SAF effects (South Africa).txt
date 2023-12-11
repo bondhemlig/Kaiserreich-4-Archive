@@ -904,6 +904,8 @@ SAF_rhodesia_secedes = {
 		}
 		transfer_units_fraction = {
 			target = ZIM
+			target_organization = 1
+			source_organization = 1
 			size = 0.05
 			navy_ratio = 0
 			keep_unit_leaders_trigger = { always = yes }
@@ -1358,7 +1360,7 @@ SAF_spawn_boer_reinforcements = {
 			engineer = { x = 0 y = 0 }
 			artillery = { x = 0 y = 1 }
 		}
-		template_counter = 72
+		template_counter = 81
 	}
 	division_template = {
 		name = "Afrikaner Scouts"

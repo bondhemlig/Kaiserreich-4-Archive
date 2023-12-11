@@ -59,9 +59,9 @@
  PSA_social_conservative_party_long: "Democratic Party (Conservative)"
  PSA_authoritarian_democrat_party: "America First"
  PSA_authoritarian_democrat_party_long: "America First Party"
- PSA_paternal_autocrat_party: "Military Junta"
- PSA_national_populist_party: "Silver Legion"
- PSA_national_populist_party_long: "Silver Legion of America"
+ PSA_paternal_autocrat_party: "$USA_paternal_autocrat_party$"
+ PSA_national_populist_party: "America First"
+ PSA_national_populist_party_long: "America First Party"
 
 ### Traits ###
  #Wallace:
@@ -377,8 +377,8 @@
  PSA_labor_relations_act_desc: "Poor relations between the owners and working classes was a major spark for the Civil War. We need to enact legislation that will ensure workers are protected from exploitation."
  PSA_social_security: "Social Security"
  PSA_social_security_desc: "A modern Social Security system will help the elderly be able to retire in peace and financial security, and generate a great deal of popular support for our administration."
- PSA_medicare: "Medicare"
- PSA_medicare_desc: "Medicare is a radical new piece of legislation proposed by leading Farmer-Labor politicians, and will enable our poorer citizens to get the medical treatment they need."
+ PSA_healthcare_expansion: "Healthcare Expansion"
+ PSA_healthcare_expansion_desc: "Even after considerable efforts, healthcare services in America are still lagging behind their pre-civil war quality. A government-funded reconstruction and expansion of the system throughout the country is sorely needed."
  PSA_social_democrats_in_power: "Farmer-Labor Victory"
  PSA_social_democrats_in_power_desc: "In an upset, the Farmer-Labor party has won the 1940 election! They have a sweeping agenda that emphasises mending the divide between the working class and the wealthy, as well as building a welfare state."
  PSA_national_youth_adminstration: "National Youth Administration"
@@ -524,31 +524,6 @@
  pacificstates.65.t: "Communalism and the Latter-Day Saints Church"
  pacificstates.65.d: "The Church of Jesus Christ and Latter-Day Saints, better known as Mormons, have expressed sentiments in recent months to strengthen the ideals of Communalism within the church in order to counter the sway of syndicalism. Notably the Church has come out with a faith-based welfare program, called coincidentally enough the Church Welfare Program, to help provide for support for fellow Mormons, furthermore the program calls for more Bishop Storehouses to be created. Due to the churches influence in the western states, this has also translated into increased support for the Progressive and Farmer-Labor Parties."
  pacificstates.65.a: "Support Communalism as the antidote to."
-
- pacificstates.66.t: "Trial of the Weapons companies"
- pacificstates.66.d: "A number of Weapons companies have fought for the various traitors and rebels against America. Thus, a hearing has been brought before congress to decide their fate. Shall we allow them to operate again, or shall they be regarded as traitors and be treated as such."
- pacificstates.66.a: "Allow them to operate again."
- pacificstates.66.b: "They are traitors and should be treated as such."
-
- pacificstates.67.t: "Trial of the Heavy Equipment companies"
- pacificstates.67.d: "A number of Heavy Equipment companies have fought for the various traitors and rebels against America. Thus a hearing has been brought before congress to decide their fate. Shall we allow them to operate again, or shall they be regarded as traitors and be treated as such."
- pacificstates.67.a: "Allow them to operate again."
- pacificstates.67.b: "They are traitors and should be treated as such."
-
- pacificstates.68.t: "Trial of the Aviation companies"
- pacificstates.68.d: "A number of Aviation companies have fought for the various traitors and rebels against America. Thus, a hearing has been brought before congress to decide their fate. Shall we allow them to operate again, or shall they be regarded as traitors and be treated as such."
- pacificstates.68.a: "Allow them to operate again."
- pacificstates.68.b: "They are traitors and should be treated as such."
-
- pacificstates.69.t: "Trial of the Naval companies"
- pacificstates.69.d: "A number of Naval companies have fought for the various traitors and rebels against America. Thus, a hearing has been brought before congress to decide their fate. Shall we allow them to operate again, or shall they be regarded as traitors and be treated as such."
- pacificstates.69.a: "Allow them to operate again."
- pacificstates.69.b: "They are traitors and should be treated as such."
-
- pacificstates.70.t: "Trial of the Industrial companies"
- pacificstates.70.d: "A number of Industrial companies have fought for the various traitors and rebels against America. Thus, a hearing has been brought before congress to decide their fate. Shall we allow them to operate again, or shall they be regarded as traitors and be treated as such."
- pacificstates.70.a: "Allow them to operate again."
- pacificstates.70.b: "They are traitors and should be treated as such."
 
  pacificstates.71.t: "Lavender Scare"
  pacificstates.71.d: "With the so-called Red Scare under way, [PSA.GetLeader] has passed Executive Order 10450 that broadened the definition of a national security risk to include 'Any criminal, infamous, dishonest, immoral, or notoriously disgraceful conduct, habitual use of intoxicants to excess, drug addiction, or sexual perversion.'. This has led to the firing of over 5,000 federal employees who were accused of being homosexual."

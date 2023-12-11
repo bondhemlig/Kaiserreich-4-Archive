@@ -771,7 +771,7 @@ china_integrate_ally_effect = {
 		FROM = {
 			set_autonomy = {
 				target = PREV
-				autonomy_state = kr_integrated_puppet
+				autonomy_state = integrated_puppet
 				end_wars = no
 			}
 		}
@@ -922,7 +922,7 @@ china_puppet_ROOT_effect = {
 					var:new_overlord = {
 						set_autonomy = {
 							target = PREV
-							autonomy_state = kr_associated_governorate
+							autonomy_state = associated_governorate
 							end_wars = no
 						}
 					}
@@ -931,7 +931,7 @@ china_puppet_ROOT_effect = {
 					var:new_overlord = {
 						set_autonomy = {
 							target = PREV
-							autonomy_state = kr_default_puppet
+							autonomy_state = default_puppet
 							end_wars = no
 						}
 					}
@@ -943,7 +943,7 @@ china_puppet_ROOT_effect = {
 	}
 	set_autonomy = {
 		target = ROOT
-		autonomy_state = kr_associated_governorate
+		autonomy_state = associated_governorate
 		end_wars = no
 	}
 	hidden_effect = {
@@ -979,7 +979,7 @@ china_puppet_PREV_effect = {
 					var:new_overlord = {
 						set_autonomy = {
 							target = PREV
-							autonomy_state = kr_associated_governorate
+							autonomy_state = associated_governorate
 							end_wars = no
 						}
 					}
@@ -988,7 +988,7 @@ china_puppet_PREV_effect = {
 					var:new_overlord = {
 						set_autonomy = {
 							target = PREV
-							autonomy_state = kr_default_puppet
+							autonomy_state = default_puppet
 							end_wars = no
 						}
 					}
@@ -1000,7 +1000,7 @@ china_puppet_PREV_effect = {
 	}
 	set_autonomy = {
 		target = PREV
-		autonomy_state = kr_associated_governorate
+		autonomy_state = associated_governorate
 		end_wars = no
 	}
 	hidden_effect = {
@@ -1035,7 +1035,7 @@ china_puppet_FROM_effect = {
 					var:new_overlord = {
 						set_autonomy = {
 							target = PREV
-							autonomy_state = kr_associated_governorate
+							autonomy_state = associated_governorate
 							end_wars = no
 						}
 					}
@@ -1044,7 +1044,7 @@ china_puppet_FROM_effect = {
 					var:new_overlord = {
 						set_autonomy = {
 							target = PREV
-							autonomy_state = kr_default_puppet
+							autonomy_state = default_puppet
 							end_wars = no
 						}
 					}
@@ -1057,7 +1057,7 @@ china_puppet_FROM_effect = {
 	}
 	set_autonomy = {
 		target = FROM
-		autonomy_state = kr_associated_governorate
+		autonomy_state = associated_governorate
 		end_wars = no
 	}
 	hidden_effect = {
@@ -1077,7 +1077,7 @@ china_puppet_TARGET_effect = {
 	hidden_effect = { var:target = { get_current_government_type = yes } }
 	set_autonomy = {
 		target = var:target
-		autonomy_state = kr_associated_governorate
+		autonomy_state = associated_governorate
 		end_wars = no
 	}
 	hidden_effect = {
@@ -1220,12 +1220,26 @@ china_generic_set_government_cosmetic_effect = {
 					}
 				}
 			}
+			SQI_zhang_tianran = {
+				hidden_effect = { remove_second_in_command_role = yes }
+				add_advisor_role = {
+					advisor = {
+						slot = second_in_command
+						idea_token = SQI_zhang_tianran
+						traits = { QIE_chief_executive_bideyuan }
+						cost = 0
+						can_be_fired = no
+					}
+					activate = yes
+				}
+			}
 		}
 		else_if = {
 			limit = {
 				613 = {
 					is_owned_and_controlled_by = PREV
-					is_capital = yes }
+					is_capital = yes
+				}
 			}
 			set_cosmetic_tag = SQI_government_nanjing
 		}
@@ -1281,31 +1295,31 @@ china_generic_set_government_cosmetic_effect = {
 china_autonomy_level_up = {
 	hidden_effect = { get_current_government_type = yes }
 	if = {
-		limit = { has_autonomy_state = kr_integrated_governorate }
+		limit = { has_autonomy_state = integrated_governorate }
 		overlord = {
 			set_autonomy = {
 				target = PREV
-				autonomy_state = kr_governorate
+				autonomy_state = governorate
 				end_wars = no
 			}
 		}
 	}
 	else_if = {
-		limit = { has_autonomy_state = kr_governorate }
+		limit = { has_autonomy_state = governorate }
 		overlord = {
 			set_autonomy = {
 				target = PREV
-				autonomy_state = kr_autonomous_governorate
+				autonomy_state = autonomous_governorate
 				end_wars = no
 			}
 		}
 	}
 	else_if = {
-		limit = { has_autonomy_state = kr_autonomous_governorate }
+		limit = { has_autonomy_state = autonomous_governorate }
 		FROM = {
 			set_autonomy = {
 				target = PREV
-				autonomy_state = kr_associated_governorate
+				autonomy_state = associated_governorate
 				end_wars = no
 			}
 		}
@@ -1316,31 +1330,31 @@ china_autonomy_level_up = {
 china_autonomy_level_down = {
 	hidden_effect = { get_current_government_type = yes }
 	if = {
-		limit = { has_autonomy_state = kr_associated_governorate }
+		limit = { has_autonomy_state = associated_governorate }
 		overlord = {
 			set_autonomy = {
 				target = PREV
-				autonomy_state = kr_autonomous_governorate
+				autonomy_state = autonomous_governorate
 				end_wars = no
 			}
 		}
 	}
 	else_if = {
-		limit = { has_autonomy_state = kr_autonomous_governorate }
+		limit = { has_autonomy_state = autonomous_governorate }
 		overlord = {
 			set_autonomy = {
 				target = PREV
-				autonomy_state = kr_governorate
+				autonomy_state = governorate
 				end_wars = no
 			}
 		}
 	}
 	else_if = {
-		limit = { has_autonomy_state = kr_governorate }
+		limit = { has_autonomy_state = governorate }
 		overlord = {
 			set_autonomy = {
 				target = PREV
-				autonomy_state = kr_integrated_governorate
+				autonomy_state = integrated_governorate
 				end_wars = no
 			}
 		}
@@ -1676,6 +1690,23 @@ china_enable_outskirts_decisions = {
 	}
 }
 
+china_enable_alliances_decisions = {
+	add_to_array = { china_possible_allies_array = ANQ }
+	#add_to_array = { china_possible_allies_array = CHI } - Should always be its own government
+	#add_to_array = { china_possible_allies_array = FNG } - Should always be its own government
+	add_to_array = { china_possible_allies_array = GXC }
+	add_to_array = { china_possible_allies_array = HNN }
+	add_to_array = { china_possible_allies_array = LEP }
+	#add_to_array = { china_possible_allies_array = QIE } - Should always be its own government
+	add_to_array = { china_possible_allies_array = SHX }
+	add_to_array = { china_possible_allies_array = SQI }
+	add_to_array = { china_possible_allies_array = SZC }
+	add_to_array = { china_possible_allies_array = YUN }
+	add_to_array = { china_possible_allies_array_northwest = SIK }
+	add_to_array = { china_possible_allies_array_northwest = XSM }
+	add_to_array = { china_possible_allies_array_northwest = KUM }
+}
+
 china_enable_concession_decisions = {
 	set_country_flag = china_concession_decisions_unlocked
 	effect_tooltip = {
@@ -1862,4 +1893,81 @@ china_splits_wuhan = {
 	set_victory_points = { province = 12467 value = 5 } #Hanyang
 	set_victory_points = { province = 7167 value = 5 } #Hankou
 	set_province_name = { id = 4619 name = VICTORY_POINTS_4619 }
+}
+
+#MIO Setup Effects
+CHN_setup_major_arsenal_decision_effect = {
+	if = {
+		limit = { NOT = { PREV = { owns_state = PREV } } }
+		PREV = { activate_targeted_decision = { target = PREV decision = CHN_integrate_major_arsenal_decision } }
+	}
+	else = {
+		PREV = {
+			mio:CHN_small_arms_industry_organisation = {
+				add_mio_funds = 250
+			}
+			mio:CHN_support_equipment_industry_organisation = {
+				add_mio_funds = 250
+			}
+			mio:CHN_artillery_industry_organisation = {
+				add_mio_funds = 250
+			}
+		}
+	}
+}
+
+CHN_setup_minor_small_arms_arsenal_decision_effect = {
+	if = {
+		limit = { NOT = { PREV = { owns_state = PREV } } }
+		PREV = { activate_targeted_decision = { target = PREV decision = CHN_integrate_minor_small_arms_arsenal_decision } }
+	}
+	else = {
+		PREV = {
+			mio:CHN_small_arms_industry_organisation = {
+				add_mio_funds = 250
+			}
+		}
+	}
+}
+
+CHN_setup_minor_support_equipment_arsenal_decision_effect = {
+	if = {
+		limit = { NOT = { PREV = { owns_state = PREV } } }
+		PREV = { activate_targeted_decision = { target = PREV decision = CHN_integrate_minor_support_equipment_arsenal_decision } }
+	}
+	else = {
+		PREV = {
+			mio:CHN_support_equipment_industry_organisation = {
+				add_mio_funds = 250
+			}
+		}
+	}
+}
+
+CHN_setup_minor_artillery_arsenal_decision_effect = {
+	if = {
+		limit = { NOT = { PREV = { owns_state = PREV } } }
+		PREV = { activate_targeted_decision = { target = PREV decision = CHN_integrate_minor_artillery_arsenal_decision } }
+	}
+	else = {
+		PREV = {
+			mio:CHN_artillery_industry_organisation = {
+				add_mio_funds = 250
+			}
+		}
+	}
+}
+
+CHN_setup_major_dockyards_decision_effect = {
+	if = {
+		limit = { NOT = { PREV = { owns_state = PREV } } }
+		PREV = { activate_targeted_decision = { target = PREV decision = CHN_integrate_major_dockyard_decision } }
+	}
+	else = {
+		PREV = {
+			mio:CHN_naval_industry_organisation = {
+				add_mio_funds = 250
+			}
+		}
+	}
 }

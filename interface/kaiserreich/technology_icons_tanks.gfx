@@ -18,7 +18,7 @@
 
 spriteTypes = {
 ### 1. Russian tanks
-	### RUS, SOV, SIB, MON, PER, ALO, ARM, ETS, BUK, KHI, TRK - direct copypaste
+	### RUS, SIB, MON, PER, ALO, ARM, ETS, BUK, KHI, TRK - direct copypaste
 	### ROM - some unique GFX
   ### Russia ###
 	# Tanks
@@ -278,268 +278,6 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_RUS_amphibious_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_amphibious_tank_1.png"
-	}
-
-  ### Socialist Russia ###
-    ### Copypaste from RUS
-	### Tanks
-	SpriteType = {
-		name = "GFX_SOV_gwtank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_gwtank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_basic_light_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_light_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_basic_light_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_light_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_basic_light_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_light_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_basic_light_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_light_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_light_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_light_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_light_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_light_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_light_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_light_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_light_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_light_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_early_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_early_main_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_early_medium_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_early_medium_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_early_medium_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_early_medium_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_early_medium_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_basic_main_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_medium_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_light_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_medium_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_light_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_medium_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_main_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_medium_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_medium_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_medium_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_medium_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_medium_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_medium_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_main_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_medium_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_medium_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_medium_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_medium_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_medium_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_medium_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_main_battle_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_main_battle_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_modern_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_modern_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_modern_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_modern_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_modern_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_modern_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_early_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_early_heavy_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_basic_heavy_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_heavy_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_basic_heavy_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_heavy_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_basic_heavy_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_heavy_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_heavy_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_heavy_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_heavy_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_heavy_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_heavy_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_heavy_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_medium_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_heavy_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_heavy_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_heavy_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_heavy_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_heavy_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_heavy_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_medium_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_super_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_super_heavy_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_super_heavy_td_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_super_heavy_td.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_super_heavy_art_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_super_heavy_art.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_super_heavy_spaa_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_super_heavy_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_amphibious_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_amphibious_tank_1.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_amphibious_tank_2_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_amphibious_tank_2.png"
-	}
-
-	# Tank chassis
-	SpriteType = {
-		name = "GFX_SOV_basic_light_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/SOV_light_tank_chassis_1.dds"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_light_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/SOV_light_tank_chassis_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_light_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/SOV_light_tank_chassis_3.dds"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_medium_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/SOV_medium_tank_chassis_1.dds"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_medium_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/SOV_medium_tank_chassis_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_medium_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/SOV_medium_tank_chassis_3.dds"
-	}
-	SpriteType = {
-		name = "GFX_SOV_basic_heavy_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/SOV_heavy_tank_chassis_1.dds"
-	}
-	SpriteType = {
-		name = "GFX_SOV_improved_heavy_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/SOV_heavy_tank_chassis_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_SOV_advanced_heavy_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/SOV_heavy_tank_chassis_3.dds"
-	}
-	SpriteType = {
-		name = "GFX_SOV_super_heavy_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_super_heavy_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_main_battle_tank_chassis_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_main_battle_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_SOV_amphibious_tank_chassis_medium"
 		texturefile = "gfx/interface/technologies/Russia/RUS_amphibious_tank_1.png"
 	}
 
@@ -3046,10 +2784,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Russia/RUS_early_heavy_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_ROM_basic_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_basic_heavy_tank.png"
-	}
-	SpriteType = {
 		name = "GFX_ROM_basic_heavy_art_medium"
 		texturefile = "gfx/interface/technologies/Russia/RUS_basic_heavy_art.png"
 	}
@@ -3062,10 +2796,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_spaa.png"
 	}
 	SpriteType = {
-		name = "GFX_ROM_improved_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_improved_heavy_tank.png"
-	}
-	SpriteType = {
 		name = "GFX_ROM_improved_heavy_art_medium"
 		texturefile = "gfx/interface/technologies/Russia/RUS_improved_heavy_art.png"
 	}
@@ -3076,10 +2806,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ROM_improved_heavy_spaa_medium"
 		texturefile = "gfx/interface/technologies/Russia/RUS_improved_medium_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_ROM_advanced_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_heavy_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_advanced_heavy_art_medium"
@@ -42828,10 +42554,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_spaa.png"
 	}
 	SpriteType = {
-		name = "GFX_ANQ_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
-	}
-	SpriteType = {
 		name = "GFX_ANQ_improved_light_td_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank_td.png"
 	}
@@ -43114,10 +42836,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_HNN_basic_light_spaa_medium"
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_HNN_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_HNN_improved_light_td_medium"
@@ -43404,10 +43122,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_spaa.png"
 	}
 	SpriteType = {
-		name = "GFX_GXC_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
-	}
-	SpriteType = {
 		name = "GFX_GXC_improved_light_td_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank_td.png"
 	}
@@ -43615,10 +43329,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_XSM_basic_light_tank_medium"
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_XSM_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_XSM_advanced_light_tank_medium"
@@ -43980,10 +43690,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_spaa.png"
 	}
 	SpriteType = {
-		name = "GFX_SQI_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
-	}
-	SpriteType = {
 		name = "GFX_SQI_improved_light_td_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank_td.png"
 	}
@@ -44266,10 +43972,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_SHX_basic_light_spaa_medium"
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_SHX_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_SHX_improved_light_td_medium"
@@ -44556,10 +44258,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_spaa.png"
 	}
 	SpriteType = {
-		name = "GFX_SZC_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
-	}
-	SpriteType = {
 		name = "GFX_SZC_improved_light_td_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank_td.png"
 	}
@@ -44842,10 +44540,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_TIB_basic_light_spaa_medium"
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_TIB_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_TIB_improved_light_td_medium"
@@ -45132,10 +44826,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_spaa.png"
 	}
 	SpriteType = {
-		name = "GFX_SIK_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
-	}
-	SpriteType = {
 		name = "GFX_SIK_improved_light_td_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank_td.png"
 	}
@@ -45420,10 +45110,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_spaa.png"
 	}
 	SpriteType = {
-		name = "GFX_YUN_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
-	}
-	SpriteType = {
 		name = "GFX_YUN_improved_light_td_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank_td.png"
 	}
@@ -45706,10 +45392,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_KUM_basic_light_spaa_medium"
 		texturefile = "gfx/interface/technologies/Italy/ITA_basic_light_spaa.png"
-	}
-	SpriteType = {
-		name = "GFX_KUM_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_imp_light_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_KUM_improved_light_td_medium"

@@ -312,7 +312,6 @@ is_russian_tag = {
 	#	tooltip = is_russian_tag
 		OR = {
 			original_tag = RUS
-			original_tag = SOV
 			original_tag = TRM
 		}
 	#}
@@ -448,6 +447,7 @@ is_danubian_tag = {
 			original_tag = CRO
 			original_tag = BOS
 			original_tag = SLV
+			original_tag = GAL
 		}
 	}
 }
@@ -558,7 +558,6 @@ is_baltic_tag = {
 ###song play-chance triggers for the music mod
 is_starting_german_tag = {
 	AND = {
-		has_socialist_government = no
 		OR = {
 			original_tag = BAT
 			original_tag = GEA

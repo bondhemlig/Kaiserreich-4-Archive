@@ -352,11 +352,6 @@ germany_flees_to_africa = {
 		transfer_int_upgrade = yes
 		copy_government_of_PREV = yes
 
-		if = {
-			limit = { has_character = MAF_Hermann_von_Goering }
-			retire_character = MAF_Hermann_von_Goering
-		}
-
 		set_party_name = {
 			ideology = totalist
 			name = GER_totalist_party
@@ -417,10 +412,6 @@ germany_flees_to_africa = {
 			limit = { owns_state = 965 }
 			set_capital = { state = 965 remember_old_capital = no }
 		}
-		if = {
-			limit = { has_character = MAF_Hermann_von_Goering }
-			retire_character = MAF_Hermann_von_Goering
-		}
 		remove_ideas = {
 			MAF_border_shit_show
 			MAF_Imminent_Collapse
@@ -451,7 +442,7 @@ germany_flees_to_africa = {
 		MAF = {
 			set_autonomy = {
 				target = PREV
-				autonomy_state = kr_autonomous_puppet
+				autonomy_state = autonomous_puppet
 				end_wars = no
 			}
 		}
@@ -465,7 +456,7 @@ germany_flees_to_africa = {
 		MAF = {
 			set_autonomy = {
 				target = GEA
-				autonomy_state = kr_autonomous_puppet
+				autonomy_state = autonomous_puppet
 				end_wars = no
 			}
 		}
@@ -498,6 +489,8 @@ germany_flees_to_africa = {
 	delete_unit = { disband = yes }
 	transfer_units_fraction = {
 		target = MAF
+		target_organization = 1
+		source_organization = 1
 		size = 0.5
 		navy_ratio = 1
 		air_ratio = 0.75
@@ -1213,6 +1206,7 @@ peace_out_non_neighbours_after_leaving_faction = {
 							}
 						}
 					}
+					any_home_area_neighbor_country = { is_ally_with = var:target }
 					any_owned_state = {
 						OR = {
 							is_core_of = var:target

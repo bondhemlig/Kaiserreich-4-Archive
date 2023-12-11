@@ -532,11 +532,8 @@ country_event = { # Socialist Constitution - Leader till election
 			base = 25
 			modifier = {
 				factor = 0
-				OR = {
-					has_game_rule = { rule = CSA_path option = CSA_PATH_RADSOC }
-					has_game_rule = { rule = CSA_path option = CSA_PATH_BROWDER_TOTALIST }
-					has_game_rule = { rule = CSA_path option = CSA_PATH_FOSTER_TOTALIST }
-				}
+				NOT = { has_game_rule = { rule = CSA_path option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CSA_path option = CSA_PATH_SYNDIE } }
 			}
 		}
 		retire_character = CSA_jack_reed
@@ -574,11 +571,8 @@ country_event = { # Socialist Constitution - Leader till election
 			base = 25
 			modifier = {
 				factor = 0
-				OR = {
-					has_game_rule = { rule = CSA_path option = CSA_PATH_SYNDIE }
-					has_game_rule = { rule = CSA_path option = CSA_PATH_BROWDER_TOTALIST }
-					has_game_rule = { rule = CSA_path option = CSA_PATH_FOSTER_TOTALIST }
-				}
+				NOT = { has_game_rule = { rule = CSA_path option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CSA_path option = CSA_PATH_RADSOC } }
 			}
 		}
 		retire_character = CSA_jack_reed
@@ -616,11 +610,8 @@ country_event = { # Socialist Constitution - Leader till election
 			base = 25
 			modifier = {
 				factor = 0
-				OR = {
-					has_game_rule = { rule = CSA_path option = CSA_PATH_SYNDIE }
-					has_game_rule = { rule = CSA_path option = CSA_PATH_RADSOC }
-					has_game_rule = { rule = CSA_path option = CSA_PATH_FOSTER_TOTALIST }
-				}
+				NOT = { has_game_rule = { rule = CSA_path option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CSA_path option = CSA_PATH_BROWDER_TOTALIST } }
 			}
 		}
 		retire_character = CSA_jack_reed
@@ -665,11 +656,8 @@ country_event = { # Socialist Constitution - Leader till election
 			base = 25
 			modifier = {
 				factor = 0
-				OR = {
-					has_game_rule = { rule = CSA_path option = CSA_PATH_SYNDIE }
-					has_game_rule = { rule = CSA_path option = CSA_PATH_RADSOC }
-					has_game_rule = { rule = CSA_path option = CSA_PATH_BROWDER_TOTALIST }
-				}
+				NOT = { has_game_rule = { rule = CSA_path option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CSA_path option = CSA_PATH_FOSTER_TOTALIST } }
 			}
 		}
 		retire_character = CSA_jack_reed
@@ -991,20 +979,13 @@ country_event = { # New Industries
 	option = { # Flavor
 		log = "[GetLogInfo]: event csa.22 option csa.22.a"
 		name = csa.22.a
-		ai_chance = { base = 0 }
 		add_political_power = 50
 	}
+
 	option = { # Flavor
 		log = "[GetLogInfo]: event csa.22 option csa.22.b"
 		name = csa.22.b
-		ai_chance = { base = 100 }
-		add_political_power = -100
-		custom_effect_tooltip = tooltip_white_line
-		USA_unlock_all_industrial_companies = yes
-		USA_unlock_all_weapons_companies = yes
-		USA_unlock_all_heavy_equipment_companies = yes
-		USA_unlock_all_naval_companies = yes
-		USA_unlock_all_aviation_companies = yes
+		add_stability = 0.05
 	}
 }
 
@@ -3202,17 +3183,14 @@ country_event = { # America wishes to join the Internationale (fired from focus)
 	option = { # Of course they may join!
 		log = "[GetLogInfo]: event csa.101 option csa.101.a"
 		name = csa.101.a
-		ai_chance = { base = 100 }
 		add_political_power = 50
-		add_to_faction = CSA
+		add_to_faction = FROM
 	}
 	option = { # We have no need of them
 		log = "[GetLogInfo]: event csa.101 option csa.101.b"
 		name = csa.101.b
 		ai_chance = { base = 0 }
-		CSA = {
-			country_event = { id = csa.102 days = 1 }
-		}
+		FROM = { country_event = { id = csa.102 days = 1 } }
 	}
 }
 
@@ -3229,7 +3207,7 @@ country_event = { # France refuses
 		name = csa.102.a
 		add_political_power = -50
 		add_opinion_modifier = {
-			target = FRA
+			target = FROM
 			modifier = KR_disapproves_of_govt
 		}
 	}
@@ -4066,22 +4044,14 @@ country_event = { #Marshal Smedley Butler Passes Away
 		text = csa.216.d.CSA
 		trigger = {
 			tag = CSA
-			NOT = {
-				has_war_with = GER
-				has_war_with = ENT
-				has_war_with = RUS
-			}
+			has_war_with_major = no
 		}
 	}
 	desc = {
 		text = csa.216.d.CSA_weltkrieg
 		trigger = {
 			tag = CSA
-			OR = {
-				has_war_with = GER
-				has_war_with = ENT
-				has_war_with = RUS
-			}
+			has_war_with_major = yes
 		}
 	}
 	desc = {

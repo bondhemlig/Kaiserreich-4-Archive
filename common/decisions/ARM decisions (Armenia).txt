@@ -17,6 +17,7 @@ ARM_foreign_policy = {
 		visible = {
 			FROM = {
 				is_faction_leader = yes
+				has_socialist_government = no
 				NOT = { has_war_with = ROOT }
 			}
 			has_socialist_government = no
@@ -26,7 +27,11 @@ ARM_foreign_policy = {
 		}
 
 		target_trigger = {
-			FROM = { is_faction_leader = yes }
+			FROM = {
+				is_faction_leader = yes
+				has_socialist_government = no
+				NOT = { has_war_with = ROOT }
+			}
 			has_socialist_government = no
 			NOT = { has_government = national_populist }
 			is_subject = no
@@ -49,10 +54,8 @@ ARM_foreign_policy = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_game_rule = { rule = ARM_forpol option = ARM_FORPOL_PER }
-					has_game_rule = { rule = ARM_forpol option = ARM_FORPOL_RUS }
-				}
+				NOT = { has_game_rule = { rule = ARM_forpol option = DEFAULT } }
+				NOT = { has_game_rule = { rule = ARM_forpol option = ARM_FORPOL_GER } }
 			}
 		}
 
@@ -71,20 +74,23 @@ ARM_foreign_policy = {
 		}
 
 		visible = {
-			has_government = national_populist
-			FROM = {
-				is_faction_leader = yes
-				NOT = { has_war_with = ROOT }
-			}
 			is_subject = no
 			is_in_faction = no
+			FROM = {
+				is_faction_leader = yes
+				both_socialist_or_both_not_socialist = yes
+				NOT = { has_war_with = ROOT }
+			}
 		}
 
 		target_trigger = {
-			has_government = national_populist
-			FROM = { is_faction_leader = yes }
 			is_subject = no
 			is_in_faction = no
+			FROM = {
+				is_faction_leader = yes
+				both_socialist_or_both_not_socialist = yes
+				NOT = { has_war_with = ROOT }
+			}
 		}
 
 		cost = 0
@@ -103,10 +109,8 @@ ARM_foreign_policy = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_game_rule = { rule = ARM_forpol option = ARM_FORPOL_PER }
-					has_game_rule = { rule = ARM_forpol option = ARM_FORPOL_GER }
-				}
+				NOT = { has_game_rule = { rule = ARM_forpol option = DEFAULT } }
+				NOT = { has_game_rule = { rule = ARM_forpol option = ARM_FORPOL_RUS } }
 			}
 		}
 
