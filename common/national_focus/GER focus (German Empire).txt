@@ -14056,6 +14056,16 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_fast_battleships"
 			add_ideas = GER_fast_battleships_idea
+			add_ideas = GER_super_heavy_battleships_escorts_idea
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+			add_tech_bonus = {
+				name = GER_hwa_fast_research
+				bonus = 1
+				uses = 2
+				category = naval
+			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
