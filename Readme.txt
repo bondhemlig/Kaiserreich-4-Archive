@@ -1,5 +1,6 @@
 #################################
 ### Kaiserreich version 1.0.1 ###
+### For Elias and Viggo
 #################################
 
 Thank you for downloading Kaiserreich for Hearts of Iron 4!
