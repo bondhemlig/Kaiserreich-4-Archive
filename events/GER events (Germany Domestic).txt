@@ -1186,7 +1186,7 @@ country_event = { # SPD youth
 		add_stability = -0.02
 		add_popularity = {
 			ideology = social_democrat
-			popularity = 0.03
+			popularity = 0.15
 		}
 		hidden_effect = {
 			country_event = { id = germany.37 days = 30 }
@@ -22603,7 +22603,7 @@ country_event = { # Integration of Austria
 		name = gerflavour.77.a
 		add_popularity = {
 			ideology = social_democrat
-			popularity = 0.06
+			popularity = 0.26
 		}
 		add_popularity = {
 			ideology = social_conservative

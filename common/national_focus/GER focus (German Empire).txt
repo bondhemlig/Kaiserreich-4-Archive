@@ -6404,7 +6404,7 @@ focus_tree = {
 
 		relative_position_id = GER_victory_of_democracy
 		x = -1
-		y = 1
+		y = 20
 
 		ai_will_do = { factor = 300 }
 		prerequisite = {
@@ -14056,6 +14056,23 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_fast_battleships"
 			add_ideas = GER_fast_battleships_idea
+<<<<<<< Updated upstream
+=======
+			add_ideas = GER_super_heavy_battleships_escorts_idea
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+			add_tech_bonus = {
+				name = GER_hwa_fast_research
+				bonus = 1
+				uses = 2
+				category = ca_tech 
+				#NOte: I need way more powerful buffs... nothing is happening in the game. I am sitting with lots of bad political and boring events.
+				# a battleship takes ages to produce (years)
+				# increase production rate by some 5000% ?
+				
+			}
+>>>>>>> Stashed changes
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}

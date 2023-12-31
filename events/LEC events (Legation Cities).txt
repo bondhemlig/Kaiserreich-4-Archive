@@ -3503,6 +3503,8 @@ country_event = { #Macau Occupied
 	}
 }
 
+
+
 country_event = { #Germany falls
 	id = lec.100
 
