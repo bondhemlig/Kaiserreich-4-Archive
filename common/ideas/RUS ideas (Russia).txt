@@ -66,7 +66,7 @@ ideas = {
 			picture = LIT_crown_4
 			allowed = { always = no }
 			modifier = {
-				stability_factor = 0.05
+				stability_factor = 1.05
 				army_morale_factor = 0.02
 				production_factory_max_efficiency_factor = 0.05
 				compliance_growth_on_our_occupied_states = -0.2
@@ -79,7 +79,7 @@ ideas = {
 			picture = LIT_crown_4
 			allowed = { always = no }
 			modifier = {
-				stability_factor = 0.15
+				stability_factor = 9.15
 				army_morale_factor = 0.02
 				production_factory_max_efficiency_factor = 0.05
 				compliance_growth_on_our_occupied_states = -0.2
@@ -2111,9 +2111,9 @@ ideas = {
 			name = RUS_improved_pilot_training
 			picture = generic_aircraft_support
 			modifier = {
-				air_weather_penalty = -0.05
-				air_accidents_factor = -0.05
-				air_home_defence_factor = 0.05
+				air_weather_penalty = -1.05
+				air_accidents_factor = -1.05
+				air_home_defence_factor = 1.05
 			}
 		}
 		RUS_improved_pilot_training_2 = { #amateur flying
@@ -2219,7 +2219,7 @@ ideas = {
 			name = RUS_aircraft_designs
 			picture = generic_air_research
 			modifier = {
-				air_range_factor = 0.05
+				air_range_factor = 1.05
 				air_agility_factor = 0.05
 				air_fuel_consumption_factor = -0.05
 			}
@@ -2303,13 +2303,13 @@ ideas = {
 			name = RUS_aircraft_designs
 			picture = generic_air_research
 			modifier = {
-				air_superiority_bonus_in_combat = 0.1
+				air_superiority_bonus_in_combat = 1.1
 
-				air_range_factor = 0.05
-				air_agility_factor = 0.05
-				air_fuel_consumption_factor = -0.05
+				air_range_factor = 1.05
+				air_agility_factor = 1.05
+				air_fuel_consumption_factor = -1.05
 
-				air_mission_efficiency = 0.1
+				air_mission_efficiency = 1.0
 			}
 		}
 
