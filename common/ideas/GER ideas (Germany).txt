@@ -3014,42 +3014,14 @@ ideas = {
 				}
 			}
 		}
-		GER_super_heavy_battleships_escorts_idea = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_super_heavy_battleships_escorts_idea" }
-			picture = generic_navy_bonus
-			allowed = { always = no }
-			modifier = {
-				navy_screen_attack_factor = 0.05
-				night_spotting_chance = 0.1
-				navy_weather_penalty = -0.10
-				industrial_capacity_dockyard = 0.25
-			}
-
-		}
 		GER_super_heavy_battleships_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_super_heavy_battleships_idea" }
 			picture = generic_navy_bonus
 			allowed = { always = no }
 			equipment_bonus = {
-				ship_hull_light = {
-					naval_speed = 0.1
-					sub_detection = 0.05
-					naval_speed = 0.05
-					armor_value = 0.2
-					build_cost_ic = -0.20
-					instant = yes
-				}
-				ship_hull_cruiser = {
-					naval_speed = 0.1
-					armor_value = 0.1
-					anti_air_attack = 0.1
-					surface_visibility = -0.05
-					build_cost_ic = -0.20
-					instant = yes
-				}
 				ship_hull_heavy = {
-					build_cost_ic = -0.15
-					armor_value = 0.2
+					build_cost_ic = 0.05
+					armor_value = 0.10
 					lg_attack = 0.10
 					hg_attack = 0.10
 					instant = yes
