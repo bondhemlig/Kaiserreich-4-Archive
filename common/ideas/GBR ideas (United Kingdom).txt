@@ -239,7 +239,7 @@ ideas = {
 			equipment_bonus = {
 				mio_cat_eq_all_aircraft = {
 					instant = yes
-					build_cost_ic = -0.10
+					build_cost_ic = -0.30
 				}
 			}
 		}
