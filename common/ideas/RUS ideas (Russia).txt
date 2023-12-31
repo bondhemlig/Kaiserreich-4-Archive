@@ -502,15 +502,15 @@ ideas = {
 			picture = MEX_politicised_army_2
 			allowed = { always = no }
 			modifier = {
-				army_morale_factor = 0.05
+				army_morale_factor = 1.05
 			}
 			targeted_modifier = {
 				tag = GER
-				attack_bonus_against = 0.10
+				attack_bonus_against = 1.10
 			}
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 0.10
+				attack_bonus_against = 1.10
 			}
 		}
 		RUS_cold_war = {
@@ -540,10 +540,10 @@ ideas = {
 				surrender_progress < 0.5
 			}
 			modifier = {
-				war_support_factor = 0.25
-				war_stability_factor = 0.1
-				army_morale_factor = 0.1
-				offence = 0.05
+				war_support_factor = 1.25
+				war_stability_factor = 1.1
+				army_morale_factor = 1.1
+				offence = 1.05
 			}
 		}
 		RUS_state_religion = {
@@ -562,7 +562,7 @@ ideas = {
 			picture = hol_haven_of_tolerance
 			allowed = { always = no }
 			modifier = {
-				stability_factor = 0.10
+				stability_factor = 1.10
 			}
 		}
 		RUS_proletarian_humanism_idea_2 = { #urban-rural conflict
@@ -583,8 +583,8 @@ ideas = {
 			modifier = {
 				stability_factor = 0.10
 				political_power_factor = 0.10
-				monthly_population = 0.25
-				production_factory_max_efficiency_factor = 0.05
+				monthly_population = 0.5
+				production_factory_max_efficiency_factor = 0.55
 			}
 		}
 		RUS_proletarian_humanism_idea_4 = { #control the unions
@@ -594,7 +594,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.10
-				industrial_capacity_factory = 0.10
+				industrial_capacity_factory = 0.50
 			}
 		}
 		RUS_proletarian_humanism_idea_5 = { #cautious industrialisation
@@ -1197,7 +1197,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = 0.15
 				production_factory_efficiency_gain_factor = -0.1
-				research_speed_factor = 0.05
+				research_speed_factor = 5.05
 			}
 		}
 		RUS_minprom_6 = { #military production + agricultural modernisation
