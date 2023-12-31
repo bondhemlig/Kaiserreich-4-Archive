@@ -55,8 +55,8 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
-				army_morale_factor = 0.02
-				production_factory_max_efficiency_factor = 0.05
+				army_morale_factor = 1.02
+				production_factory_max_efficiency_factor = 2.05
 				compliance_growth_on_our_occupied_states = -0.2
 			}
 		}
@@ -215,11 +215,11 @@ ideas = {
 			picture = LIT_crown_4
 			allowed = { always = no }
 			modifier = {
-				political_power_factor = 0.1
-				supply_consumption_factor = -0.05
+				political_power_factor = 0.5
+				supply_consumption_factor = -1.00
 				resistance_damage_to_garrison_on_our_occupied_states = 0.1
 				research_speed_factor = 0.05
-				non_core_manpower = 0.05
+				non_core_manpower = 0.25
 				industrial_concern_cost_factor = -0.33
 				materiel_manufacturer_cost_factor = -0.33
 				tank_manufacturer_cost_factor = -0.33
