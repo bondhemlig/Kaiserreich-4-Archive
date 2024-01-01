@@ -86,6 +86,7 @@ ideas = {
 				political_power_gain = 0.2
 			}
 		}
+		
 		RUS_constitutional_monarchy_6 = { #rumyantsev library
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_constitutional_monarchy_6" }
 			name = RUS_constitutional_monarchy
@@ -2662,7 +2663,7 @@ ideas = {
 			traits = { nav_cas_producer_defense_2 }
 			research_bonus = {
 				air_equipment = 0.1
-			}
+			} 
 		}
 
 		sikorsky_aircraft = {

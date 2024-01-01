@@ -9106,6 +9106,30 @@ country_event = { #The Presidential Succession Law
 	}
 }
 
+# Say Hello to Viggo and Elias
+country_event = {
+	id = ustates.542
+	title = ustates.542.t
+	desc = ustates.542.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event ustates.542 option ustates.542.a"
+		name = ustates.542.a
+
+		add_manpower = 2
+		add_political_power = 1
+	}
+	option = {
+		name = ustates.542.b
+		add_manpower = 2
+		add_political_power = 85
+
+	}
+}
+
 ##############################
 ######Army Events#############
 #####by Drozdovite############

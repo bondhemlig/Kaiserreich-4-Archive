@@ -192,5 +192,26 @@ continuous_focus_palette = {
 
 		available_if_capitulated = yes
 	}
+
+	#OP focus
+
+	focus = {
+		id = continuous_softattack_buff
+
+		icon = GFX_goal_bag_of_money
+
+		modifier = {
+			army_org = 10
+			army_attack_factor = 1.0
+			army_strength_factor = 0.5
+		}
+
+		ai_will_do = { factor = -100 }
+
+		daily_cost = 0.5
+
+		available_if_capitulated = yes
+	}
+
 }
 

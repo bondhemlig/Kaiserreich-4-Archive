@@ -69,6 +69,8 @@
  continuous_naval_production_desc: "By focusing resources on our shipyards and exempting skilled shipbuilders from military service, we can dramatically reduce production time for ships."
  continuous_air_production: "Air Production"
  continuous_air_production_desc: "We can reorganise our aviation industry to eliminate waste and streamline production."
+ continuous_softattack_buff: "Soft- and hard attack buff"
+ continuous_softattack_buff_desc: "Higher soft attack will help our troops on the ground significantly. The AI SHOULD NEVER DO THIS FOCUS. This is for players who struggle and need help."
  continuous_non_factory_construct: "Construction Engineering"
  continuous_non_factory_construct_desc: "There is still a lot of slack in our construction industry. By focusing our attention on it, we can achieve a significant improvement in construction speed. Unfortunately, the production of machine tools has proven a major bottleneck in the expansion of our heavy industry, so they won't benefit from efforts in this area."
  continuous_reduce_training_time: "Army Training"

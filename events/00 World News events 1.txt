@@ -17,7 +17,7 @@ news_event = {
 		text = worldnews.0.d.basic
 		trigger = {
 			GER = {
-				owns_state = 608
+				owns_state = 373
 			}			
 		}
 	}

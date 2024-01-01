@@ -369,6 +369,8 @@
  USA_cincinnatus: "Cincinnatus"
  #Willkie:
  USA_political_outsider: "Political Outsider"
+ #Stonehammer
+ USA_STONEHAMMER: "Stonehammers Swedish Legacy"
  #Halleck:
  USA_foe_of_the_establishment: "Foe of the Establishment"
  #Eisenhower:
@@ -2431,6 +2433,12 @@
  ustates.541.d: "In an ironic, perhaps fitting turn of event, the General who once deposed and imprisoned the President in a coup has now himself being arrested. With MacArthur now out of the way, the question looming in Washington is who should be President for the remainder of the 1936-1940 term. Constitutionally speaking, when the President dies or otherwise leaves office before the completion of their term, their Vice President takes up office. However, the Presidential Succession Law, passed by MacArthur's Congress at gunpoint allowed the General to \"legally\" become President and declared the sitting President and Vice President incapacitated or absent. This question has brought a new round of partisan bickering as Quentin Roosevelt, the deposed Vice President under Olson, and his supporters argue that he is the legitimate President of America and that the Pacific Government was a continuation of the Constitutional government throughout the civil war.\n\nFor many former Federalists however, this question cuts deep into the heart of the question of the legitimacy of the Washington government during the Civil War and many argue that Roosevelt's challenge threatens to destabilise the peace and reconciliation process. It would be better to instead allow for interim President [Root.GetLeader] to serve out the remainder of the term until new elections can be held. Thankfully, both sides have decided to resolve this question peacefully and it has quickly went before the Supreme Court. After hearing legal arguments from both sides, the court has announced its verdict that..."
  ustates.541.a: "...the Law was unconstitutional - Roosevelt is the rightful president."
  ustates.541.b: "...the Law was legitimate - [ROOT.GetLeader] is the rightful president."
+ 
+#remember: at least one space
+ ustates.542.t: "Elias and Viggo joins the government"
+ ustates.542.d: "The two have chosen to lead the country to glory. Can they make America great again!"
+ ustates.542.a: "... what?"
+ ustates.542.b: "Hey that's us!"
 
 ###############
 ##Army Events##
@@ -2863,6 +2871,10 @@
 
  USA_john_edgar_hoover: "John Edgar Hoover"
  USA_john_edgar_hoover_desc: "§YAdvisor Description\nBorn:§! §gJanuary 1st, 1895, in Washington, D.C., United States of America§!\n§YPolitical Career:§! §gA native son of Washington DC, J. Edgar Hoover is the director and public face of the Federal Bureau of Investigations. His allies credit him with stemming the tide of organised crime and protecting the innocent. Hoover's critics say that he has gained political power through scapegoating immigrants as the cause of organised crime. Malicious rumours are spread that Hoover is in a relationship with his male secretary, and is an African-American passing as white."
+
+ USA_Elias_Stenhammar: "Carl Mikael Elias Stenhammar"
+ USA_Elias_Stenhammar_desc: "§YAdvisor Description\nBorn:§! §gJuly 30st, 1914, in Boston, United States of America§!\n§YPolitical Career:§! §gA native son of Swedish, Marie-Louise, she is the director and public face of the Federal Bureau of First Aid Kits. His allies credit him with stemming the tide of organised crime and protecting the innocent and great research reports on it. Hoover's critics say that he has gained political power through prooving to people that immigrants are not the cause of organised crime and fight against those who scapegoat such crime. He also warns of global warming, but that is a future problem?"
+
  USA_john_pierpont_morgan_jr: "John Pierpont Morgan Jr."
  USA_john_pierpont_morgan_jr_desc: "§YAdvisor Description\nBorn:§! §gSeptember 7th, 1867, in Irvington, New York, United States of America§!\n§YPolitical Career:§! §gJ.P. Morgan Jr is heir of the great fortune amassed by his father, centred around their control of the J.P. Morgan Co. bank. Their investments in heavy industry have contributed to the consolidation of several industries, though Morgan has also heavily focused on philanthropy and lobbying for a more active foreign policy. A proponent of closer ties with the Entente (at least in part due to his prior investments during the Weltkrieg) his disdain for the Kaiserreich’s hegemony was deepened by an attempt on his life by a German monarchist in 1915. Still heavily influential in American commerce and industry, he makes for a powerful ally and lobbyist."
  USA_william_randolph_hearst: "William Randolph Hearst"

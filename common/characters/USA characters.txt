@@ -287,6 +287,19 @@ characters = {
 			traits = { KR_fbi_director }
 		}
 	}
+	USA_Elias_Stenhammar = {
+		name = USA_Elias_Stenhammar
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_Elias_Stenhammar.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Elias_Stenhammar
+			traits = { USA_STONEHAMMER }
+		}
+	}
 	USA_john_pierpont_morgan_jr = {
 		name = USA_john_pierpont_morgan_jr
 		portraits = {

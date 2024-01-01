@@ -173,7 +173,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				industry_repair_factor = 0.5
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.3 #buffed
 				production_speed_arms_factory_factor = -0.15
 			}
 		}

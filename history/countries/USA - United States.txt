@@ -255,6 +255,7 @@ activate_advisor = USA_united_states_congress_sic
 
 ### Advisors ###
 recruit_character = USA_john_edgar_hoover
+recruit_character = USA_Elias_Stenhammar
 recruit_character = USA_john_pierpont_morgan_jr
 recruit_character = USA_william_randolph_hearst
 recruit_character = USA_cordell_hull

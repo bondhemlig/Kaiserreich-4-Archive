@@ -36,6 +36,11 @@ focus_tree = {
 		}
 
 		select_effect = {
+			log = "[GetDateText]: [Root.GetName]: Funny event"
+			country_event = { id = ustates.542 days = 1 }
+		}
+
+		select_effect = {
 			log = "[GetDateText]: [Root.GetName]: Select Focus USA_reintroduce_gwbill"
 			country_event = { id = ustates.500 days = 3 }
 		}

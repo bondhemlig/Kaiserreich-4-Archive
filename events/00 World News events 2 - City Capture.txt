@@ -3987,6 +3987,22 @@ news_event = {
 		}
 	}
 }
+
+#fall of any city
+#news_event = {
+#	id = worldnews.CityHasFallen
+#	immediate = { log = "[GetLogInfo]: event worldnews.CityHasFallen" }
+#	title = worldnews.CityHasFallen.t
+#	picture = GFX_news_event_capture_atlanta
+#	trigger = {
+#		wants_world_news = yes
+#	}
+#	immediate = {
+#		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+#	}
+#
+#}
+
 # The Fall of Kunming
 news_event = {
 	id = worldnews.308

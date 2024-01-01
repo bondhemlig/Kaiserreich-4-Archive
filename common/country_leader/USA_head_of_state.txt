@@ -152,6 +152,12 @@ leader_traits = {
 		political_power_factor = -0.1
 		stability_factor = 0.1
 	}
+	USA_STONEHAMMER = {
+		random = no
+		political_power_factor = 0.2
+		stability_factor = 0.2
+		encryption_factor = 1.1
+	}
 	USA_foe_of_the_establishment = { #Charles Halleck
 		random = no
 		political_power_factor = 0.1
