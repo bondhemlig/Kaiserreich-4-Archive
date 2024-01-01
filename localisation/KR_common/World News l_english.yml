@@ -19,6 +19,11 @@
  worldnews_rus_vs_ger_ENT_allies: "And if Germany is busy in the east, then..."
  worldnews_rus_vs_ger_JAP: "Let them fight..."
 
+ #random event haha
+ worldnews.0.t: "Life in German America"
+ worldnews.0.d.basic: "Germany holds USA. Life there is different now."
+ worldnews.0.response: "Ok."
+
 # France starts the war
  worldnews.2.t: "War in Western Europe"
  worldnews.2.d.starts_wk: "For two decades, Germany and the Third Internationale have been at peace. Despite their ideological opposition to each other, the horrors of the Great War weighed on all - and neither side was prepared to repeat them. Not everyone was convinced that this would last.\n\nToday, the sceptics were proven right: after years of rising revanchism and military expansion, the French government in Paris officially declared that it was no longer bound by the Treaty of Versailles, and has proclaimed revolutionary war to reclaim its lost territory and liberate the German proletariat, with Berlin denouncing France as a rogue state in response. Already, French and German forces have traded fire along Alsace-Lorraine - the inauguration of the second great war in a generation to shake the continent of Europe."

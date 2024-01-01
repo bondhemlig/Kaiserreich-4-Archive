@@ -22,9 +22,9 @@ ideas = {
 			allowed = { original_tag = GRE }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				army_core_defence_factor = 0.10
+				army_core_defence_factor = 0.25
 				army_core_attack_factor = 0.10
-				army_morale_factor = 0.1
+				army_morale_factor = 0.25
 				conscription = 0.02
 			}
 		}
@@ -895,7 +895,7 @@ ideas = {
 			allowed = { original_tag = GRE }
 			traits = { small_ship_producer_defense_1 }
 			research_bonus = {
-				naval_equipment = 0.1
+				naval_equipment = 1.5
 			}
 		}
 
@@ -905,8 +905,8 @@ ideas = {
 			available = { has_completed_focus = GRE_hellenic_shipyards }
 			traits = { cruiser_producer_offense_2 }
 			research_bonus = {
-				naval_equipment = 0.1
-			}
+				naval_equipment = 1.1
+			}	
 		}
 
 		neorion_thassos = {
@@ -914,7 +914,7 @@ ideas = {
 			allowed = { original_tag = GRE }
 			traits = { capital_ship_producer_mass_1 }
 			research_bonus = {
-				naval_equipment = 0.1
+				naval_equipment = 1.5
 			}
 		}
 	}
@@ -927,7 +927,7 @@ ideas = {
 			allowed = { original_tag = GRE }
 			traits = { bomber_producer_offense_1 }
 			research_bonus = {
-				air_equipment = 0.1
+				air_equipment = 0.2
 			}
 		}
 
@@ -936,7 +936,7 @@ ideas = {
 			allowed = { original_tag = GRE }
 			traits = { nav_cas_producer_mass_0 }
 			research_bonus = {
-				air_equipment = 0.1
+				air_equipment = 0.2
 			}
 		}
 	}

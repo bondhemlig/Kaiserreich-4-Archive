@@ -13,8 +13,8 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				surrender_limit = 0.10
-				trade_opinion_factor = 1
-				war_support_factor = -0.2
+				trade_opinion_factor = 10
+				war_support_factor = 0.8
 			}
 		}
 		GER_imperial_pride_2 = {
@@ -24,9 +24,10 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				surrender_limit = 0.10
+				war_support_factor = 2
 				trade_opinion_factor = 1
 			}
-		}
+		}	
 
 		GER_march_to_april = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_march_to_april" }
@@ -2734,23 +2735,23 @@ ideas = {
 			allowed = { always = no }
 			equipment_bonus = {
 				mio_cat_eq_only_light_fighter_no_cv = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.25
 					instant = yes
 				}
 				small_plane_cas_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.25
 					instant = yes
 				}
 				small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.25
 					instant = yes
 				}
 				mio_cat_eq_only_tactical_bomber = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.25
 					instant = yes
 				}
 				medium_plane_fighter_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.25
 					instant = yes
 				}
 			}
@@ -2842,7 +2843,7 @@ ideas = {
 			equipment_bonus = {
 				mio_cat_eq_only_tactical_bomber = {
 					air_bombing = 0.1
-					air_attack = 0.1
+					air_attack = 2.1
 					instant = yes
 				}
 			}
@@ -2869,13 +2870,13 @@ ideas = {
 			picture = man_five_year_plan_air
 			allowed = { always = no }
 			modifier = {
-				air_bombing_targetting = 0.1
-				air_range_factor = 0.1
+				air_bombing_targetting = 0.2
+				air_range_factor = 1.0
 			}
 			equipment_bonus = {
 				mio_cat_eq_only_tactical_bomber = {
-					air_bombing = 0.1
-					air_attack = 0.1
+					air_bombing = 0.2
+					air_attack = 0.2
 					instant = yes
 				}
 			}
@@ -2921,7 +2922,7 @@ ideas = {
 			picture = generic_air_payment
 			allowed = { always = no }
 			modifier = {
-				ground_attack_factor = 0.1
+				ground_attack_factor = 2.1
 			}
 			equipment_bonus = {
 				small_plane_cas_airframe = {
@@ -2955,7 +2956,7 @@ ideas = {
 			allowed = { always = no }
 			equipment_bonus = {
 				submarine = {
-					build_cost_ic = -0.10
+					build_cost_ic = -0.20
 					instant = yes
 				}
 			}
@@ -2986,7 +2987,7 @@ ideas = {
 			equipment_bonus = {
 				ship_hull_heavy = {
 					naval_range = 0.1
-					build_cost_ic = -0.10
+					build_cost_ic = -10.10
 					instant = yes
 				}
 			}
@@ -2997,8 +2998,8 @@ ideas = {
 			allowed = { always = no }
 			equipment_bonus = {
 				ship_hull_cruiser = {
-					naval_range = 0.1
-					build_cost_ic = -0.10
+					naval_range = 5.1
+					build_cost_ic = -1.10
 					instant = yes
 				}
 			}
@@ -3009,19 +3010,56 @@ ideas = {
 			allowed = { always = no }
 			equipment_bonus = {
 				ship_hull_heavy = {
-					naval_speed = 0.1
+					naval_speed = 1.1
 					instant = yes
 				}
 			}
 		}
+<<<<<<< Updated upstream
+=======
+		GER_super_heavy_battleships_escorts_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_super_heavy_battleships_escorts_idea" }
+			picture = generic_navy_bonus
+			allowed = { always = no }
+			modifier = {
+				navy_screen_attack_factor = 1.05
+				night_spotting_chance = 1.0
+				navy_weather_penalty = -1.00
+				industrial_capacity_dockyard = 100.00
+			}
+
+		}
+>>>>>>> Stashed changes
 		GER_super_heavy_battleships_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_super_heavy_battleships_idea" }
 			picture = generic_navy_bonus
 			allowed = { always = no }
 			equipment_bonus = {
+<<<<<<< Updated upstream
 				ship_hull_heavy = {
 					build_cost_ic = 0.05
 					armor_value = 0.10
+=======
+				ship_hull_light = {
+					naval_speed = 0.2
+					sub_detection = 0.05
+					naval_speed = 0.05
+					armor_value = 1.0
+					build_cost_ic = -0.20
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					naval_speed = 0.2
+					armor_value = 0.1
+					anti_air_attack = 0.1
+					surface_visibility = -0.05
+					build_cost_ic = -0.20
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.15
+					armor_value = 0.3
+>>>>>>> Stashed changes
 					lg_attack = 0.10
 					hg_attack = 0.10
 					instant = yes
@@ -3034,8 +3072,8 @@ ideas = {
 			name = GER_wegener_strategy
 			allowed = { always = no }
 			modifier = {
-				strike_force_movement_org_loss = -0.1
-				naval_coordination = 0.1
+				strike_force_movement_org_loss = -0.3
+				naval_coordination = 0.4
 			}
 		}
 		GER_wegener_strategy_2 = {
@@ -3044,10 +3082,10 @@ ideas = {
 			name = GER_wegener_strategy
 			allowed = { always = no }
 			modifier = {
-				strike_force_movement_org_loss = -0.1
-				naval_coordination = 0.1
-				ships_at_battle_start = 0.1
-				navy_capital_ship_attack_factor = 0.1
+				strike_force_movement_org_loss = -0.2
+				naval_coordination = 0.2
+				ships_at_battle_start = 0.25
+				navy_capital_ship_attack_factor = 0.25
 			}
 		}
 		GER_wegener_strategy_21 = {
@@ -3056,8 +3094,8 @@ ideas = {
 			name = GER_wegener_strategy
 			allowed = { always = no }
 			modifier = {
-				strike_force_movement_org_loss = -0.1
-				naval_coordination = 0.1
+				strike_force_movement_org_loss = -0.15
+				naval_coordination = 0.15
 				ships_at_battle_start = 0.1
 				navy_capital_ship_attack_factor = 0.1
 				experience_gain_navy_unit_factor = 0.25
@@ -3069,11 +3107,11 @@ ideas = {
 			name = GER_wegener_strategy
 			allowed = { always = no }
 			modifier = {
-				strike_force_movement_org_loss = -0.1
-				naval_coordination = 0.1
-				ships_at_battle_start = 0.1
-				navy_capital_ship_attack_factor = 0.1
-				spotting_chance = 0.1
+				strike_force_movement_org_loss = -0.3
+				naval_coordination = 0.3
+				ships_at_battle_start = 0.3
+				navy_capital_ship_attack_factor = 0.3
+				spotting_chance = 0.4
 			}
 		}
 		GER_wegener_strategy_3 = {
@@ -3082,12 +3120,12 @@ ideas = {
 			name = GER_wegener_strategy
 			allowed = { always = no }
 			modifier = {
-				strike_force_movement_org_loss = -0.1
-				naval_coordination = 0.1
-				ships_at_battle_start = 0.1
-				navy_capital_ship_attack_factor = 0.1
-				spotting_chance = 0.1
-				experience_gain_navy_unit_factor = 0.25
+				strike_force_movement_org_loss = -0.7
+				naval_coordination = 1.0
+				ships_at_battle_start = 0.5
+				navy_capital_ship_attack_factor = 0.9
+				spotting_chance = 0.8
+				experience_gain_navy_unit_factor = 0.55
 			}
 		}
 		GER_combined_arms_navy_1 = {
@@ -3281,9 +3319,9 @@ ideas = {
 			picture = ger_rebuild_the_nation
 			allowed = { always = no }
 			modifier = {
-				production_speed_buildings_factor = 0.1
-				industrial_capacity_factory = 0.1
-				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = 0.2
+				production_factory_max_efficiency_factor = 0.2
 			}
 		}
 		GER_industrial_boom_2 = {
@@ -3293,7 +3331,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				production_speed_buildings_factor = 0.2
-				industrial_capacity_factory = 0.1
+				industrial_capacity_factory = 0.2
 				production_factory_max_efficiency_factor = 0.1
 				conversion_cost_mil_to_civ_factor = -0.3
 			}
@@ -3716,7 +3754,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.05
 			}
 			research_bonus = {
-				industry = 0.1
+				industry = 1.1
 			}
 		}
 
@@ -3743,7 +3781,7 @@ ideas = {
 			traits = { industrial_manufacturer }
 			modifier = {
 				production_speed_industrial_complex_factor = 0.15
-				local_resources_factor = 0.05
+				local_resources_factor = 0.25
 			}
 			research_bonus = {
 				industry = 0.1
@@ -3871,7 +3909,7 @@ ideas = {
 				artillery_producer_defense_2
 			}
 			research_bonus = {
-				artillery = 0.1
+				artillery = 1.1
 			}
 		}
 
@@ -3884,7 +3922,7 @@ ideas = {
 				artillery_producer_offense_2
 			}
 			research_bonus = {
-				artillery = 0.1
+				artillery = 2.1
 			}
 		}
 
@@ -3922,7 +3960,7 @@ ideas = {
 				heavy_tank_producer_offense_2
 			}
 			research_bonus = {
-				armor = 0.1
+				armor = 2.1
 			}
 		}
 
@@ -3985,7 +4023,7 @@ ideas = {
 				medium_tank_producer_mass_2
 			}
 			research_bonus = {
-				armor = 0.1
+				armor = 2.1
 			}
 		}
 
@@ -3996,7 +4034,7 @@ ideas = {
 				small_tank_producer_offense_2
 			}
 			research_bonus = {
-				armor = 0.1
+				armor = 3.1
 			}
 		}
 
@@ -4117,7 +4155,7 @@ ideas = {
 				nav_cas_producer_offense_2
 			}
 			research_bonus = {
-				air_equipment = 0.1
+				air_equipment = 10.1
 			}
 		}
 
@@ -4201,8 +4239,8 @@ ideas = {
 				siemens_schuckert_air
 			}
 			research_bonus = {
-				air_equipment = 0.1
-				tactical_bomber = 0.1
+				air_equipment = 5.1
+				tactical_bomber = 5.1
 			}
 		}
 	}

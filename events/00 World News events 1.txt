@@ -7,6 +7,36 @@
 
 add_namespace = worldnews
 
+#German USA
+
+news_event = {
+	id = worldnews.0
+	immediate = { log = "[GetLogInfo]: event worldnews.0" }
+	title = worldnews.0.t
+	desc = {
+		text = worldnews.0.d.basic
+		trigger = {
+			GER = {
+				owns_state = 608
+			}			
+		}
+	}
+
+	picture = GFX_news_event_HOL_cars
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	option = {
+		name = worldnews.0.response
+	}
+
+}
+
 # Second Weltkrieg - Russia vs Germany
 news_event = {
 	id = worldnews.1
