@@ -55,8 +55,8 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
-				army_morale_factor = 1.02
-				production_factory_max_efficiency_factor = 2.05
+				army_morale_factor = 0.02
+				production_factory_max_efficiency_factor = 0.05
 				compliance_growth_on_our_occupied_states = -0.2
 			}
 		}
@@ -66,7 +66,7 @@ ideas = {
 			picture = LIT_crown_4
 			allowed = { always = no }
 			modifier = {
-				stability_factor = 1.05
+				stability_factor = 0.05
 				army_morale_factor = 0.02
 				production_factory_max_efficiency_factor = 0.05
 				compliance_growth_on_our_occupied_states = -0.2
@@ -79,7 +79,7 @@ ideas = {
 			picture = LIT_crown_4
 			allowed = { always = no }
 			modifier = {
-				stability_factor = 9.15
+				stability_factor = 0.15
 				army_morale_factor = 0.02
 				production_factory_max_efficiency_factor = 0.05
 				compliance_growth_on_our_occupied_states = -0.2
@@ -215,11 +215,11 @@ ideas = {
 			picture = LIT_crown_4
 			allowed = { always = no }
 			modifier = {
-				political_power_factor = 0.5
-				supply_consumption_factor = -1.00
+				political_power_factor = 0.1
+				supply_consumption_factor = -0.05
 				resistance_damage_to_garrison_on_our_occupied_states = 0.1
 				research_speed_factor = 0.05
-				non_core_manpower = 0.25
+				non_core_manpower = 0.05
 				industrial_concern_cost_factor = -0.33
 				materiel_manufacturer_cost_factor = -0.33
 				tank_manufacturer_cost_factor = -0.33
@@ -502,15 +502,15 @@ ideas = {
 			picture = MEX_politicised_army_2
 			allowed = { always = no }
 			modifier = {
-				army_morale_factor = 1.05
+				army_morale_factor = 0.05
 			}
 			targeted_modifier = {
 				tag = GER
-				attack_bonus_against = 1.10
+				attack_bonus_against = 0.10
 			}
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 1.10
+				attack_bonus_against = 0.10
 			}
 		}
 		RUS_cold_war = {
@@ -540,10 +540,10 @@ ideas = {
 				surrender_progress < 0.5
 			}
 			modifier = {
-				war_support_factor = 1.25
-				war_stability_factor = 1.1
-				army_morale_factor = 1.1
-				offence = 1.05
+				war_support_factor = 0.25
+				war_stability_factor = 0.1
+				army_morale_factor = 0.1
+				offence = 0.05
 			}
 		}
 		RUS_state_religion = {
@@ -562,7 +562,7 @@ ideas = {
 			picture = hol_haven_of_tolerance
 			allowed = { always = no }
 			modifier = {
-				stability_factor = 1.10
+				stability_factor = 0.10
 			}
 		}
 		RUS_proletarian_humanism_idea_2 = { #urban-rural conflict
@@ -583,8 +583,8 @@ ideas = {
 			modifier = {
 				stability_factor = 0.10
 				political_power_factor = 0.10
-				monthly_population = 0.5
-				production_factory_max_efficiency_factor = 0.55
+				monthly_population = 0.25
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 		RUS_proletarian_humanism_idea_4 = { #control the unions
@@ -594,7 +594,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.10
-				industrial_capacity_factory = 0.50
+				industrial_capacity_factory = 0.10
 			}
 		}
 		RUS_proletarian_humanism_idea_5 = { #cautious industrialisation
@@ -1197,7 +1197,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = 0.15
 				production_factory_efficiency_gain_factor = -0.1
-				research_speed_factor = 5.05
+				research_speed_factor = 0.05
 			}
 		}
 		RUS_minprom_6 = { #military production + agricultural modernisation
@@ -1855,10 +1855,8 @@ ideas = {
 			picture = ITA_bandits_war
 			allowed = { always = no }
 			modifier = {
-				army_morale_factor = 1
-				land_reinforce_rate = 1
-
-
+				army_morale_factor = 0.10
+				land_reinforce_rate = 0.02
 			}
 		}
 		RUS_asymmetric_warfare_2 = { #decentralised structure
@@ -1867,8 +1865,8 @@ ideas = {
 			picture = ITA_bandits_war
 			allowed = { always = no }
 			modifier = {
-				army_morale_factor = 1.10
-				land_reinforce_rate = 1.02
+				army_morale_factor = 0.10
+				land_reinforce_rate = 0.02
 
 				experience_gain_army_factor = 0.05
 				experience_loss_factor = -0.1
@@ -1881,16 +1879,16 @@ ideas = {
 			picture = ITA_bandits_war
 			allowed = { always = no }
 			modifier = {
-				army_morale_factor = 1.10
-				land_reinforce_rate = 1.02
+				army_morale_factor = 0.10
+				land_reinforce_rate = 0.02
 
 				experience_gain_army_factor = 0.05
 				experience_loss_factor = -0.1
 				special_forces_cap = 0.15
 
-				max_dig_in = 10
-				dig_in_speed_factor = 0.5
-				cas_damage_reduction = 0.5
+				max_dig_in = 5
+				dig_in_speed_factor = 0.1
+				cas_damage_reduction = 0.1
 			}
 		}
 		RUS_asymmetric_warfare_4 = { #small unit tactics
@@ -1899,10 +1897,10 @@ ideas = {
 			picture = ITA_bandits_war
 			allowed = { always = no }
 			modifier = {
-				army_morale_factor = 1.50
-				land_reinforce_rate = 1.04
+				army_morale_factor = 0.10
+				land_reinforce_rate = 0.04
 
-				experience_gain_army_factor = 1.05
+				experience_gain_army_factor = 0.05
 				experience_loss_factor = -0.1
 				special_forces_cap = 0.15
 
@@ -1910,7 +1908,7 @@ ideas = {
 				dig_in_speed_factor = 0.1
 				cas_damage_reduction = 0.1
 
-				org_loss_when_moving = -0.45
+				org_loss_when_moving = -0.15
 				recon_factor_while_entrenched = 0.1
 				army_attack_speed_factor = 0.1
 			}
@@ -2111,9 +2109,9 @@ ideas = {
 			name = RUS_improved_pilot_training
 			picture = generic_aircraft_support
 			modifier = {
-				air_weather_penalty = -1.05
-				air_accidents_factor = -1.05
-				air_home_defence_factor = 1.05
+				air_weather_penalty = -0.05
+				air_accidents_factor = -0.05
+				air_home_defence_factor = 0.05
 			}
 		}
 		RUS_improved_pilot_training_2 = { #amateur flying
@@ -2219,7 +2217,7 @@ ideas = {
 			name = RUS_aircraft_designs
 			picture = generic_air_research
 			modifier = {
-				air_range_factor = 1.05
+				air_range_factor = 0.05
 				air_agility_factor = 0.05
 				air_fuel_consumption_factor = -0.05
 			}
@@ -2303,13 +2301,13 @@ ideas = {
 			name = RUS_aircraft_designs
 			picture = generic_air_research
 			modifier = {
-				air_superiority_bonus_in_combat = 1.1
+				air_superiority_bonus_in_combat = 0.1
 
-				air_range_factor = 1.05
-				air_agility_factor = 1.05
-				air_fuel_consumption_factor = -1.05
+				air_range_factor = 0.05
+				air_agility_factor = 0.05
+				air_fuel_consumption_factor = -0.05
 
-				air_mission_efficiency = 1.0
+				air_mission_efficiency = 0.1
 			}
 		}
 
