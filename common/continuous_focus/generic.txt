@@ -201,14 +201,30 @@ continuous_focus_palette = {
 		icon = GFX_goal_bag_of_money
 
 		modifier = {
-			army_org = 10
-			army_attack_factor = 1.0
-			army_strength_factor = 0.5
+			planning_speed = 0.2
+			experience_gain_army_unit_factor = 0.5
+
+			army_org = 10 #makes divisions hold better I guess
+			
+			army_attack_factor = 1.0 #does not do much
+			army_strength_factor = 0.5 #holding?
+
+			#OP COMBO?
+			army_attack_speed_factor = 1.0
+			org_loss_when_moving = 0.5
+
+			breakthrough_factor = 1.0
+			coordination_bonus = 0.3
+
+			#OOF
+			initiative_factor = 0.3
+
+
 		}
 
 		ai_will_do = { factor = -100 }
 
-		daily_cost = 0.5
+		daily_cost = 0
 
 		available_if_capitulated = yes
 	}
